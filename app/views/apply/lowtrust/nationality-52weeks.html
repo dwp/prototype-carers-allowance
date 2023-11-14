@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="payment-from-abroad">
+
+
+       
+
+
+                {{ govukRadios({
+                    idPrefix: 'elig--qb',
+                    name: 'elig--qb',
+                    fieldset: {
+                        legend: {
+                            text: 'Have you been away from England, Scotland or Wales for more than 52 weeks since (claim date - 3 years)?',
+                            isPageHeading: true,
+                            classes: 'govuk-fieldset__legend--l'
+                        }
+                    },
+
+                    hint: {
+                        text: "This could be one trip, or a number of trips adding up to 52 weeks."
+                    },
+                    
+                    items: [
+                        {
+                            text: 'Yes',
+                            value: 'yes~/apply/lowtrust/nationality-52weeks-details1'
+                        },
+                        {
+                            text: 'No',
+                            value: 'no',
+                              conditional: {
+                              html: nationalityHtml
+                                }
+                           
+                        }
+                     
+                    ]
+                }) }}
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

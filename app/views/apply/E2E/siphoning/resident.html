@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+    Which country do you live in?
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="esw">
+
+                {{ govukRadios({
+                    idPrefix: 'siphoning--resident',
+                    name: 'siphoning--resident',
+                    fieldset: {
+                        legend: {
+                            text: 'Which country do you live in?',
+                            isPageHeading: true,
+                            classes: 'govuk-fieldset__legend--l'
+                        }
+                    },
+                    items: [
+                        {
+                            text: 'England',
+                            value: 'England'
+                        },
+                        {
+                            text: 'Scotland',
+                            value: 'Scotland'
+                        },
+                        {
+                            text: 'Wales',
+                            value: 'Wales'
+                        },
+                        {
+                            text: 'Northern Ireland',
+                            value: 'Northern Ireland~NI'
+                        },
+                        {
+                            text: 'Somewhere else',
+                            value: 'Somewhere else~legacy'
+                        }
+                    ]
+                }) }}
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+    When do you want Carer’s Allowance to start?
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form method="post" action="nationality3">
+
+
+            {{ govukRadios({
+            classes: "govuk-radios--inline",
+            idPrefix: "changed-name",
+            name: "changed-name",
+            fieldset: {
+                legend: {
+                text: "Do you live in the United Kingdom or Ireland?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+                }
+            },
+            hint: {
+                text: "Select ‘Yes’ if you currently live in England, Scotland, Wales, the Isle of Man, the Channel Isles or the Republic of Ireland."
+            },
+            items: [
+                {
+                value: "yes",
+                text: "Yes"
+                },
+                {
+                value: "no",
+                text: "No"
+                }
+            ]
+            }) }}
+        
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

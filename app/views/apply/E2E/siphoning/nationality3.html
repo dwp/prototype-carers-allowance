@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+    When do you want Carer’s Allowance to start?
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form method="post" action="nationality4">
+
+
+            {{ govukRadios({
+            classes: "govuk-radios",
+            idPrefix: "changed-name",
+            name: "changed-name",
+            fieldset: {
+                legend: {
+                text: "Have you spent more than a year abroad in the past 3 years?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+                }
+            },
+            hint: {
+                text: "Select 'Yes' if you've spent more than 12 months outside the United Kingdom, the Republic of Ireland, the Isle of Man, or the Channel Isles in the past 36 months."
+            },
+            items: [
+                {
+                value: "Yes",
+                text: "Yes"
+                },
+                {
+                value: "no",
+                text: "No"
+                },
+                {
+                value: "no",
+                text: "Not sure"
+                }
+            ]
+
+
+
+            }) }}
+        
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

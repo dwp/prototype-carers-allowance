@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+    We need to know about any breaks in care
+{% endblock %}
+{% block beforeContent %} 
+    {{ super() }}
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form method="post" action="check-answers4">
+           
+                       
+
+
+              {{ govukCheckboxes({
+                name: "email-confimation",
+                fieldset: {
+                  legend: {
+                    text: "How would you like to receive the decision about your application?",
+                    isPageHeading: true,
+                    classes: "govuk-fieldset__legend--l"
+                  }
+                },
+                hint: {
+                  text: "Select all that apply."
+                },
+                items: [
+                  {
+                    value: "letter~/apply/aca-2050/confirmation",
+                    text: "Letter"
+                  },
+                  {
+                    value: "email~/apply/aca-2050/email",
+                    text: "Email"
+                  }
+                ]
+              }) }}
+                
+                {{ govukButton ({
+                    html: 'Continue',
+                    classes: 'govuk-button'
+                }) }}
+
+            </form>
+        </div>
+</div>
+{% endblock %}

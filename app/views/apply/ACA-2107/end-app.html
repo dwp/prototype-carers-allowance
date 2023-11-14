@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% set carerName = 'Alice Walsh' %}
+{% set dpName = 'Emily Marsden' %}
+{% set claimDate = '1 February 2021' %}
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+{% block beforeContent %} 
+    {{ super() }}
+ 
+ {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="decision-making">
+                <h1 class="govuk-heading-l">End of application
+                </h1>
+          <br>
+          <br>
+           {{ govukButton({
+                    text: "Next part of session",
+                    classes: "govuk-button--secondary"
+                  }) }}
+                   
+            </form>
+        </div>
+</div>
+{% endblock %}

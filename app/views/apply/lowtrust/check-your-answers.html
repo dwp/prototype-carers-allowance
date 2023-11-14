@@ -1,0 +1,637 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+  Check your answers – Apply for Carer’s Allowance – GOV.UK
+{% endblock %}
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <form action="declaration">
+        <h1 class="govuk-heading-xl">Check your answers</h1>
+        <h2 class="govuk-heading-m">
+          Care details
+        </h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do you spend at least 35 hours a week caring for James Smith?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a
+                class="govuk-link govuk-link--no-visited-state"
+                href="claim-date?edit&amp;editorigin=/ui-citizen-claim/review#f-claimStartDate%5Bdd%5D">
+                Change
+                <span class="govuk-visually-hidden">your claim date.</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              When did you start providing 35 hours of care?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              9 September 2022
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a
+                class="govuk-link govuk-link--no-visited-state"
+                href="about-you-your-details?edit&amp;editorigin=/ui-citizen-claim/review#f-carerTitle">
+                Change
+                <span class="govuk-visually-hidden">your name.</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Claim date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              9 September 2022
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a
+                class="govuk-link govuk-link--no-visited-state"
+                href="about-you-your-details?edit&amp;editorigin=/ui-citizen-claim/review#f-carerNationalInsuranceNumber">
+                Change
+                <span class="govuk-visually-hidden">your National Insurance number.</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+        <h2 class="govuk-heading-m">
+          About you - the carer
+        </h2>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Mr John  Smith
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a
+                class="govuk-link govuk-link--no-visited-state"
+                href="about-you-your-details?edit&amp;editorigin=/ui-citizen-claim/review#f-carerTitle">
+                Change
+                <span class="govuk-visually-hidden">your name.</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National Insurance number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              AA123456D
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a
+                class="govuk-link govuk-link--no-visited-state"
+                href="about-you-your-details?edit&amp;editorigin=/ui-citizen-claim/review#f-carerNationalInsuranceNumber">
+                Change
+                <span class="govuk-visually-hidden">your National Insurance number.</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              9 September 1999
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a
+                class="govuk-link govuk-link--no-visited-state"
+                href="about-you-your-details?edit&amp;editorigin=/ui-citizen-claim/review#f-carerDateOfBirth%5Bdd%5D">
+                Change
+                <span class="govuk-visually-hidden">your date of birth.</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Marital status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Married or civil partner
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a
+                class="govuk-link govuk-link--no-visited-state"
+                href="about-you-marital-status?edit&amp;editorigin=/ui-citizen-claim/review#f-maritalStatus">
+                Change
+                <span class="govuk-visually-hidden">your marital status.</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Some Street<br>Some City<br></dd>
+                <dd class="govuk-summary-list__actions">
+                  <a
+                    class="govuk-link govuk-link--no-visited-state"
+                    href="about-you-address-manual?edit&amp;editorigin=/ui-citizen-claim/review#f-address1">
+                    Change
+                    <span class="govuk-visually-hidden">your address.</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Telephone number (optional)
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Not given
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a
+                    class="govuk-link govuk-link--no-visited-state"
+                    href="about-you-telephone?edit&amp;editorigin=/ui-citizen-claim/review#f-contactNumber">
+                    Change
+                    <span class="govuk-visually-hidden">your telephone number.</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Do you want an email to confirm we have received your application?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a
+                    class="govuk-link govuk-link--no-visited-state"
+                    href="about-you-email-confirmation?edit&amp;editorigin=/ui-citizen-claim/review#f-emailAddress">
+                    Change
+                    <span class="govuk-visually-hidden">whether you want an email to confirm we have received your application.</span>
+                  </a>
+                </dd>
+              </div>
+            </dl>
+            <h2 class="govuk-heading-m">
+              Nationality and where you've lived
+            </h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Your nationality
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  British
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a
+                    class="govuk-link govuk-link--no-visited-state"
+                    href="nationality-where-you-live?edit&amp;editorigin=/ui-citizen-claim/review#f-nationality">
+                    Change
+                    <span class="govuk-visually-hidden">your nationality.</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Have you always lived in England, Scotland or Wales?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Yes
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a
+                    class="govuk-link govuk-link--no-visited-state"
+                    href="nationality-where-you-live?edit&amp;editorigin=/ui-citizen-claim/review#f-alwaysLivedIn">
+                    Change
+                    <span class="govuk-visually-hidden">your answer to the question, 'have you always lived in England, Scotland or Wales'.</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Have you been away from England, Scotland or Wales for more than 52 weeks in the 3 years before your claim date?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a
+                    class="govuk-link govuk-link--no-visited-state"
+                    href="nationality-where-you-live?edit&amp;editorigin=/ui-citizen-claim/review#f-beenAwayFrom">
+                    Change
+                    <span class="govuk-visually-hidden">your answer to the question, 'have you been away from England, Scotland or Wales for
+                      more than 52 weeks in the 3 years before your claim date'.</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Have you or any of your close family worked abroad or been paid benefits from outside the United Kingdom since your
+                  claim date?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a
+                    class="govuk-link govuk-link--no-visited-state"
+                    href="nationality-payments-from-abroad?edit&amp;editorigin=/ui-citizen-claim/review#f-payFromAbroad">
+                    Change
+                    <span class="govuk-visually-hidden">your answer to the question, 'have you or any of your close family worked abroad or
+                      been paid benefits from outside the United Kingdom since your claim date'.</span>
+                  </a>
+                </dd>
+              </div>
+            </dl>
+            <h2 class="govuk-heading-m">
+              About your partner
+            </h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Have you lived with a partner at any time since your claim date?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a
+                    class="govuk-link govuk-link--no-visited-state"
+                    href="your-partner-personal-details?edit&amp;editorigin=/ui-citizen-claim/review#f-hadPartnerSinceClaimDate">
+                    Change
+                    <span class="govuk-visually-hidden">your answer to the question, 'have you lived with a partner at any time since your
+                      claim date'.</span>
+                  </a>
+                </dd>
+              </div>
+            </dl>
+            <h2 class="govuk-heading-m">
+              About the person you provide care for
+            </h2>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Mr James  Smith
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a
+                    class="govuk-link govuk-link--no-visited-state"
+                    href="care-you-provide-their-personal-details?edit&amp;editorigin=/ui-citizen-claim/review#f-careeTitle">
+                    Change
+                    <span class="govuk-visually-hidden">the name of the person you care for.</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Date of birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  9 September 1999
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a
+                    class="govuk-link govuk-link--no-visited-state"
+                    href="care-you-provide-their-personal-details?edit&amp;editorigin=/ui-citizen-claim/review#f-careeDateOfBirth%5Bdd%5D">
+                    Change
+                    <span class="govuk-visually-hidden">the date of birth of the person you care for.</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Relationship to you
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  brother
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a
+                    class="govuk-link govuk-link--no-visited-state"
+                    href="care-you-provide-their-personal-details?edit&amp;editorigin=/ui-citizen-claim/review#f-careeRelationship">
+                    Change
+                    <span class="govuk-visually-hidden">your answer to the question, 'what's their relationship to you'.</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Do they live at the same address as you?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  No
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a
+                    class="govuk-link govuk-link--no-visited-state"
+                    href="care-you-provide-their-personal-details?edit&amp;editorigin=/ui-citizen-claim/review#f-liveAtSameAddress">
+                    Change
+                    <span class="govuk-visually-hidden">your answer to the question, 'do they live at the same address as you'.</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Address
+
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Some Street<br>Some City<br></dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="care-you-provide-address-manual?edit&amp;editorigin=/ui-citizen-claim/review#f-address1">
+                        Change
+                        <span class="govuk-visually-hidden">the address of the person you care for.</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      National Insurance number
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Not provided
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="care-you-provide-their-nino?edit&amp;editorigin=/ui-citizen-claim/review#f-careeNationalInsuranceNumber">
+                        Change
+                        <span class="govuk-visually-hidden">the National Insurance number of the person you care for.</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      What benefit do they get?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Personal Independence Payment - daily living component
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="allowance-benefits?edit&amp;editorigin=/ui-citizen-claim/review#f-benefits">
+                        Change
+                        <span class="govuk-visually-hidden">your answer to the question, 'Which benefit does the person you provide care for
+                          get?'.</span>
+                      </a>
+                    </dd>
+                  </div>
+              
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Does anyone else spend 35 hours or more each week providing care for James Smith?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="care-you-provide-more-about-the-care?edit&amp;editorigin=/ui-citizen-claim/review#f-otherCarerSpend35HoursCaring">
+                        Change
+                        <span class="govuk-visually-hidden">your answer to the question, 'does anyone else spend 35 hours or more each week
+                          providing care for James Smith'.</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <h2 class="govuk-heading-m">
+                  Breaks in care
+                </h2>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Since 1 November 2022 have there been any breaks in care?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="any-breaks-in-care?edit&amp;editorigin=/ui-citizen-claim/review#f-anyBreaksInCare">
+                        Change
+                        <span class="govuk-visually-hidden">your answer to the question, 'since 1 November 2022 have there been any breaks in
+                          care'.</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <h2 class="govuk-heading-m">
+                  Education
+                </h2>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Have you been on a course of education since your claim date?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="education?edit&amp;editorigin=/ui-citizen-claim/review#f-beenInEducationSinceClaimDate">
+                        Change
+                        <span class="govuk-visually-hidden">your answer to the question, 'have you been on a course of education since your
+                          claim date'.</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <h2 class="govuk-heading-m">
+                  Your income
+                </h2>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Have you been an employee at any time since 9 March 2022?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="employment?edit&amp;editorigin=/ui-citizen-claim/review#f-employeeSince">
+                        Change
+                        <span class="govuk-visually-hidden">your answer to the question, 'have you been an employee at any time since 9 March
+                          2022'.</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Have you been self-employed at any time since 2 September 2022?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="self-employment?edit&amp;editorigin=/ui-citizen-claim/review#f-selfEmployedSince">
+                        Change
+                        <span class="govuk-visually-hidden">your answer to the question, 'have you been self-employed at any time since
+                          ${oneWeekBeforeClaimStartDate}'.</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Other income you have received since 9 September 2022
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <ul class="govuk-list">
+                        <li>No, I have not received any of these</li>
+                      </ul>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="additional-income-types?edit&amp;editorigin=/ui-citizen-claim/review#f-otherIncomeSince">
+                        Change
+                        <span class="govuk-visually-hidden">which other income you have received since ${claimStartDate}.</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Have your received any other income since 9 September 2022
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="other-income?edit&amp;editorigin=/ui-citizen-claim/review#f-otherIncome">
+                        Change
+                        <span class="govuk-visually-hidden">your answer to the question, 'have you received any other income since
+                          ${claimStartDate}'.</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <h2 class="govuk-heading-m">
+                  Payment details
+                </h2>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Bank or building society account details
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Not provided - this may delay any payments you are entitled to
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link govuk-link--no-visited-state" href="pay-details?edit&amp;editorigin=/ui-citizen-claim/review#">
+                        Change
+                        <span class="govuk-visually-hidden">bank or building society details.</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      How often should we pay your Carer's Allowance?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Every week
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="pay-frequency?edit&amp;editorigin=/ui-citizen-claim/review#f-howOftenPaid">
+                        Change
+                        <span class="govuk-visually-hidden">how often we should pay your Carer's Allowance.</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <h2 class="govuk-heading-m">
+                  Additional information
+                </h2>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Do you want to tell us any additional information about your claim?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-additionalInformation">
+                        Change
+                        <span class="govuk-visually-hidden">the additional details you have told us about your claim.</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Do you want to receive future communications in Welsh?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      No
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-futureCommunicationsInWelsh">
+                        Change
+                        <span class="govuk-visually-hidden">your answer to the question, 'do you want to receive future communications in
+                          Welsh'.</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      This application was completed by
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      John Smith
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a
+                        class="govuk-link govuk-link--no-visited-state"
+                        href="third-party?edit&amp;editorigin=/ui-citizen-claim/review#f-areYouTheCarer">
+                        Change
+                        <span class="govuk-visually-hidden">who this application was completed by.</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+
+                {{ govukButton({
+          html: 'Print summary',
+          classes: 'govuk-button--secondary'
+        }) }}
+                {{ govukInsetText ({
+          text: 'Printing the summary does not send your application. You must click continue and send it from the next page.'
+        }) }}
+                {{ govukButton({
+          html: 'Continue'
+        }) }}
+              </form>
+            </div>
+          </div>
+        {% endblock %}

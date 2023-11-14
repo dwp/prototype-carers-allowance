@@ -1,0 +1,193 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Change of circs index
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink ({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+
+        <h1 class="govuk-heading-xl">Change of circs - iteration 3</h1>
+                <h2 class="govuk-heading-l">OIDV failed verification MVP</h1>
+
+<br>
+        <ol class="app-task-list">
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">1. </span> Start
+            </h2>
+            <ul class="app-task-list__items">
+
+              {{ taskListItem({
+                name: 'Start page',
+                url: 'start-page',
+                isActive: 'true'
+              }) }}
+           
+
+            </ul>
+          </li>
+
+
+          <li>
+
+              <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">2. </span>What change do you want to report?
+            </h2>
+            <ul class="app-task-list__items">
+              {{ taskListItem({
+                name: 'Change selection',
+                url: 'Change-selection',
+                isActive: 'true'
+              }) }}
+               {{ taskListItem({
+                name: 'Why do you want to end your claim?',
+                url: 'why-end-claim',
+                isActive: 'true'
+              }) }}
+               {{ taskListItem({
+                name: 'Tell us once',
+                url: 'death',
+                isActive: 'true'
+              }) }}
+               {{ taskListItem({
+                name: 'OIDV information',
+                url: 'oidv-info',
+                isActive: 'true'
+              }) }}
+            
+
+              </ul>
+
+                   <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">3. </span>OIDV
+            </h2>
+            <ul class="app-task-list__items">
+              {{ taskListItem({
+                name: 'OIDV',
+                url: 'oidv',
+                isActive: 'true'
+              }) }}
+                {{ taskListItem({
+                name: 'OIDV failed',
+                url: 'oidv-failed',
+                isActive: 'true'
+              }) }}
+            
+              </ul>
+
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">4. </span>Carer's details
+            </h2>
+            <ul class="app-task-list__items">
+              {{ taskListItem({
+                name: 'Carer name',
+                url: 'name',
+                isActive: 'true'
+              }) }}
+               {{ taskListItem({
+                name: 'Date of birth',
+                url: 'date-of-birth',
+                isActive: 'true'
+              }) }}
+           {{ taskListItem({
+                name: 'NINO',
+                url: 'national-insurance-number',
+                isActive: 'true'
+              }) }}
+
+             {{ taskListItem({
+                name: 'Telephone number',
+                url: 'contact-number',
+                isActive: 'true'
+              }) }}
+
+              </ul>
+
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">5. </span> Disabled person's details
+            </h2>
+            <ul class="app-task-list__items">
+
+
+              {{ taskListItem({
+                name: 'DP name',
+                url: 'dp-name',
+                isActive: 'true'
+              }) }}
+
+               {{ taskListItem({
+                name: 'DP relationship to carer',
+                url: 'allowance-benefits',
+                isActive: 'true'
+              }) }}
+             
+
+            </ul>
+          </li>
+          <li>
+
+          <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">6. </span> End claim
+            </h2>
+            <ul class="app-task-list__items">
+            {{ taskListItem({
+                name: 'End claim',
+                url: 'end-claim',
+                isActive: 'true'
+              }) }}
+            
+             
+            </ul>
+          
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">6. Email confirmation</span> 
+            </h2>
+            <ul class="app-task-list__items">
+              {{ taskListItem({
+                name: 'Email confirmation',
+                url: 'email-confirmation',
+                isActive: 'true'
+              }) }}
+               {{ taskListItem({
+                name: 'Email address',
+                url: 'email-address',
+                isActive: 'true'
+              }) }}
+               {{ taskListItem({
+                name: 'Declaration',
+                url: 'declaration',
+                isActive: 'true'
+              }) }}
+      
+            
+            </ul>
+          </li>
+         
+        </ol>
+
+        <!-- h2 class="govuk-heading-m">Possible questions for before sign in to improve usability</h2>
+
+        <ul class="govuk-list">
+            <li><a href="siphoning/possible/qb">DP qualifying benefit</a></li>
+            <li><a href="siphoning/possible/age">Under 16</a></li>
+        </ul -->
+
+
+      </form>
+    </div>
+
+  
+
+  </div>
+{% endblock %}

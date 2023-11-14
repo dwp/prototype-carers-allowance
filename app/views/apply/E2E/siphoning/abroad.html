@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+    Do you or any of your family receive any payments from abroad?
+{% endblock %}
+
+{% block beforeContent %}
+
+    {{ super() }}
+
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="education">
+
+
+
+<h1 class="govuk-heading-l">
+  Do you or any of your family receive any payments from abroad?
+</h1>
+
+                {{ govukRadios ({
+                    idPrefix: 'siphoning--education',
+                    name: 'siphoning--education',
+                
+                 
+                     hint: {
+                            text: "This includes any payments, benefits or state pensions from outside the UK."
+                        },
+                    items: [
+                        {
+                            text: 'Yes',
+                            value: 'Yes~legacy'
+                        },
+                        {
+                            text: 'No',
+                            value: 'No'
+                        }
+                    ]
+                }) }}
+
+                {{ govukButton ({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

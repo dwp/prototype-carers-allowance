@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="end-date-current">
+
+                     {{ govukDateInput ({
+          id: 'educationStartDate',
+          namePrefix: 'educationStartDate',
+          fieldset: {
+            legend: {
+              text: 'When did you start this course of education?',
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--l'
+            }
+          },
+          hint: {
+            text: 'If you do not know the exact date, enter the closest date to when you think it started.'
+          },
+          items: [
+            {
+              classes: 'govuk-input--width-2',
+              name: 'day',
+              label: 'Day'
+            },
+            {
+              classes: 'govuk-input--width-2',
+              name: 'month',
+              label: 'Month'
+            },
+            {
+              classes: 'govuk-input--width-4',
+              name: 'year',
+              label: 'Year'
+            }
+          ],
+          hint: {
+            text: 'If you do not know the exact date, enter the closest date to when you think it started.'
+          }
+        }) }}
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

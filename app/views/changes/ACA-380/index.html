@@ -1,0 +1,55 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  ACA-380
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        ACA-380 
+      </h1>
+
+      <h2 class="govuk-heading-m">Prototypes for this ticket</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+
+        <li>
+          <a href="pay-details.html">Pay details page</a>
+        </li>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            if sort code is blank
+            <br>
+            <b class="govuk-error-message">Enter a sort code</b> (Rhowch god didoli)
+          </li>
+          <li>
+            if sort code is invalid
+            <br>
+            <b class="govuk-error-message">Enter a valid sort code, like 30 94 30</b> (Rhowch god didoli dilys, fel 30 94 30)
+          </li>
+          <li>
+            if sort code is not 6 digits long
+            <br>
+            <b class="govuk-error-message">Sort code must be 6 digits long</b> (Mae'n rhaid i'r cod didoli fod yn 6 digid)
+          </li>
+        </ul>
+
+      </ul>
+    </div>
+</div>
+
+{% endblock %}

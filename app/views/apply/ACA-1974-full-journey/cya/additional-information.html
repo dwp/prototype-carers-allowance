@@ -1,0 +1,11 @@
+{% from "govuk/components/summary-list/macro.njk" import "govukSummaryList" with context %}
+
+{% block additionalInformation %}
+  <h2 class="govuk-heading-m">Additional information</h2>
+
+  {{ govukSummaryList({
+    classes: "govuk-!-margin-bottom-9",
+    rows: sections.additionalInformation.rows
+  }) }}
+
+{% endblock %}

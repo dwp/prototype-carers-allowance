@@ -1,0 +1,141 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  ACA-111
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        ACA-111
+      </h1>
+
+      {{ govukInsetText ({
+        html: '<a href="legacy-pages/about-you">Joined-up journey beginning with ’About you - the carer’</a>'
+      }) }}
+
+      <h2 class="govuk-heading-m">Prototypes for this ticket</h2>
+
+      <ul class="govuk-list">
+
+        <li>
+          <a href="postcode.html">Enter postcode page</a>
+        </li>
+
+        <li>
+          <a href="postcode.html?error=true">Enter postcode page (with 'not found' error)</a>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              if API returns no results for the postcode (as example)
+              <br>
+              <b class="govuk-error-message">We could not find this postcode, enter your address manually or try again</b> 
+            </li>
+            <li>
+              if postcode is blank
+              <br>
+              <b class="govuk-error-message">Enter a postcode</b> 
+            </li>
+            <li>
+              if postcode is not in the correct format
+              <br>
+              <b class="govuk-error-message">Enter a real postcode</b> 
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="select-address.html">Select address page</a>
+        </li>
+
+        <li>
+          <a href="select-address.html?error=true">Select address page (with 'no selection' error)</a>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              if user does not choose an address (as example)
+              <br>
+              <b class="govuk-error-message">Select an address</b> 
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="manual-address.html">Manual address page</a>
+        </li>
+
+        <li>
+          <a href="manual-address.html?error=true">Manual address page (with errors)</a>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              if 'building and street address' field is blank
+              <br>
+              <b class="govuk-error-message">Enter your building and street</b> 
+            </li>
+            <li>
+              if town or city field is blank
+              <br>
+              <b class="govuk-error-message">Enter your town or city</b> 
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="telephone.html">Telephone number page</a>
+        </li>
+
+        <li>
+          <a href="email.html">Email address page</a>
+        </li>
+
+      </ul>
+
+      <h3 class="govuk-heading-s">Non-UK address entry</h3>
+      
+      <ul class="govuk-list">
+        <li>
+          <a href="international.html">International address page</a>
+        </li>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+              if address fields are blank
+              <br>
+              <b class="govuk-error-message">Enter your address</b> 
+            </li>
+            <li>
+              if the country field is blank
+              <br>
+              <b class="govuk-error-message">Enter your country</b> 
+            </li>
+          </ul>
+      </ul>
+        
+
+      {% set detailsContentHTML %}
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Added postcode lookup screens to follow GDS pattern</li>
+          <li>Separated contact details questions on to single pages</li>
+          <li>Changed flow of questions to accommodate new pages (see flow in Jira ticket)</li>
+          <li>Amended content on contact detail pages</li>
+        </ul>
+      {% endset %}
+      
+      {{ govukDetails({
+        summaryText: 'Description of changes',
+        html: detailsContentHTML
+      }) }}
+
+    </div>
+</div>
+
+{% endblock %}

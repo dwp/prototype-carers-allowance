@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+You may be eligible for Carer’s Allowance
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="#">
+
+   
+                    <p class="govuk-fieldset__legend--l">
+                        What is Carol Webber's National Insurance number?
+                    </p>
+                    <p>
+                        This can be found on a benefit letter or their National Insurance card. 
+                        
+                        If they do not have a National Insurance number, leave it blank and continue.
+                    </p>
+
+                    <div class="govuk-inset-text">
+                        We may be able to process your claim quicker if you provide their National Insurance number.
+                      </div>
+                   
+            
+                {{ govukInput ({
+                        id: 'dp-ni',
+                        name: 'dp-ni',
+                        
+                        classes: 'govuk-input--width-20',
+                        label: {
+                            text: 'National Insurance number',
+                            classes: 'govuk-input--width-20 app-bold-label'
+                        },
+                        hint: {
+                            text: 'For example, QQ123456C'
+                        }
+                    }) }}
+
+                    
+                        
+                        
+
+              
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

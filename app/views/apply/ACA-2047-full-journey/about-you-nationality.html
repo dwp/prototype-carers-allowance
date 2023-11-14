@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Are you a British national?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+
+        {{ govukRadios ({
+          idPrefix: 'britishNational',
+          name: 'britishNational',
+          fieldset: {
+            legend: {
+              text: 'Are you a British national?',
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--l'
+            }
+          },
+          items: [
+            {
+              text: 'Yes',
+              value: 'British',
+              checked: true if data.britishNational === 'British'
+            },
+            {
+              text: 'No',
+              value: 'Another nationality',
+              checked: true if data.britishNational === 'Another nationality'
+            }
+          ]
+        }) }}
+
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,177 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Change of circs index
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink ({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+
+        <h1 class="govuk-heading-xl">Change of circs - iteration 2</h1>
+
+        <ol class="app-task-list">
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">1. </span> Start
+            </h2>
+            <ul class="app-task-list__items">
+
+              {{ taskListItem({
+                name: 'Start page',
+                url: 'start-page',
+                isActive: 'true'
+              }) }}
+              {{ taskListItem({
+                name: 'Are you the carer',
+                url: 'third-party',
+                isActive: 'true'
+              }) }}
+
+            </ul>
+          </li>
+
+
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">2. </span>Carer's details
+            </h2>
+            <ul class="app-task-list__items">
+              {{ taskListItem({
+                name: 'Carer name',
+                url: 'name',
+                isActive: 'true'
+              }) }}
+               {{ taskListItem({
+                name: 'Date of birth',
+                url: 'date-of-birth',
+                isActive: 'true'
+              }) }}
+           {{ taskListItem({
+                name: 'NINO',
+                url: 'national-insurance-number',
+                isActive: 'true'
+              }) }}
+
+             {{ taskListItem({
+                name: 'Telephone number',
+                url: 'contact-number',
+                isActive: 'true'
+              }) }}
+
+              </ul>
+
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">3. </span> Disabled person's details
+            </h2>
+            <ul class="app-task-list__items">
+
+
+              {{ taskListItem({
+                name: 'DP name',
+                url: 'dp-name',
+                isActive: 'true'
+              }) }}
+
+               {{ taskListItem({
+                name: 'DP relationship to carer',
+                url: 'allowance-benefits',
+                isActive: 'true'
+              }) }}
+             
+
+            </ul>
+          </li>
+          <li>
+
+          <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">4. </span> What change do you want to report?
+            </h2>
+            <ul class="app-task-list__items">
+            {{ taskListItem({
+                name: 'Change selection',
+                url: 'change-selection',
+                isActive: 'true'
+              }) }}
+            
+             
+            </ul>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">5. </span> Report break in care
+            </h2>
+            <ul class="app-task-list__items">
+              {{ taskListItem({
+                name: 'Break in care',
+                url: 'break-in-care',
+                isActive: 'true'
+              }) }}
+              {{ taskListItem({
+                name: 'Date of the break in care',
+                url: 'break-in-care-date',
+                isActive: 'true'
+              }) }}
+              {{ taskListItem({
+                name: 'Medical break',
+                url: 'medical-break',
+                isActive: 'true'
+              }) }}
+              {{ taskListItem({
+                name: 'Breaks summary',
+                url: 'breaks-summary',
+                isActive: 'true'
+              }) }}
+             
+            
+            </ul>
+          </li>
+          <li>
+            <h2 class="app-task-list__section">
+              <span class="app-task-list__section-number">6. Email confirmation</span> 
+            </h2>
+            <ul class="app-task-list__items">
+              {{ taskListItem({
+                name: 'Email confirmation',
+                url: 'email-confirmation',
+                isActive: 'true'
+              }) }}
+               {{ taskListItem({
+                name: 'Email address',
+                url: 'email-address',
+                isActive: 'true'
+              }) }}
+               {{ taskListItem({
+                name: 'Declaration',
+                url: 'declaration',
+                isActive: 'true'
+              }) }}
+      
+            
+            </ul>
+          </li>
+         
+        </ol>
+
+        <!-- h2 class="govuk-heading-m">Possible questions for before sign in to improve usability</h2>
+
+        <ul class="govuk-list">
+            <li><a href="siphoning/possible/qb">DP qualifying benefit</a></li>
+            <li><a href="siphoning/possible/age">Under 16</a></li>
+        </ul -->
+
+
+      </form>
+    </div>
+
+  
+
+  </div>
+{% endblock %}

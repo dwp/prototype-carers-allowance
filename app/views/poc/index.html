@@ -1,0 +1,50 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Prototypes: Carer’s Allowance proof of concept
+{% endblock %}
+
+{% block header %}
+
+
+    {{ super() }}
+
+
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back to prototype home',
+    href: '/'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+   <div class="govuk-width-container">
+
+    
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Pre</h1>
+
+<br><br>
+
+      
+      {{ prototypeVersionCard({
+        ticket: 'E2E-old',
+        description: 'End-to-end journey for simple disallow.',
+        statusTag: {
+            text: 'Experimental', 
+            classes: 'govuk-tag--red'
+        }
+      }) }}
+
+
+      
+    </div>
+  </div>
+
+{% endblock %}

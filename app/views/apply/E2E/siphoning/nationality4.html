@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+    When do you want Carer’s Allowance to start?
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form method="post" action="nationality4">
+
+            {{ govukRadios({
+            classes: "govuk-radios",
+            idPrefix: "changed-name",
+            name: "changed-name",
+            fieldset: {
+                legend: {
+                text: "Have you been out of the United Kingdom in the past 2 years?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+                }
+            },
+           
+            items: [
+                {
+                value: "Yes~https://dth-prototype.herokuapp.com/auth/v8/register/start-rmd?service-name=Apply%20for%20Carer%27s%20Allowance",
+                text: "Yes, for less than 2 weeks"
+                },
+                {
+                value: "Yes~https://dth-prototype.herokuapp.com/auth/v8/register/start-rmd?service-name=Apply%20for%20Carer%27s%20Allowance",
+                text: "Yes, for 2 to 4 weeks"
+                },
+                {
+                value: "Yes~https://dth-prototype.herokuapp.com/auth/v8/register/start-rmd?service-name=Apply%20for%20Carer%27s%20Allowance",
+                text: "Yes, for more than 4 weeks"
+                },
+                    {
+                      divider: "or"
+                    },
+                    {
+                      value: "no",
+                      text: "No"
+                    }
+                  ]
+  
+            }) }}
+        
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

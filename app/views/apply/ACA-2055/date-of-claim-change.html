@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+    We need to know about any breaks in care
+{% endblock %}
+{% block beforeContent %} 
+    {{ super() }}
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form method="post" action="check-answers4">
+           
+                   <h1 class="govuk-heading-l">If you change your claim date, we will need to ask you some questions again</h1>
+
+                   <p class="govuk-body">This is because a number of questions are based on your claim date.</p>
+                       
+
+
+                   {{ govukRadios({
+                    name: "date-of-claim",
+                    fieldset: {
+                      legend: {
+                        text: "Do you want to continue with the new claim date of (claim date)?",
+                        isPageHeading: true,
+                        classes: "govuk-fieldset__legend--m"
+                      }
+                    },
+                    items: [
+                      {
+                        value: "yes",
+                        text: "Yes"
+                      },
+                      {
+                        value: "no",
+                        text: "No, keep my claim date as (original claim date)?"
+                      }
+                    ]
+                  }) }}
+                
+                {{ govukButton ({
+                    html: 'Continue',
+                    classes: 'govuk-button'
+                }) }}
+
+            </form>
+        </div>
+</div>
+{% endblock %}

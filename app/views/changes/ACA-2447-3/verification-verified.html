@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  What is your telephone number?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="oidv">
+
+        <h1 class="govuk-heading-l">Verification verified placeholder</h1>
+
+{# 
+        <p>You will now go through an online verification process to make sure you are able to end your Carer’s Allowance claim.</p>
+        <p>You will first need to register using your email address and mobile phone number. Once you have registered, you will then need to answer some questions to verify your details.</p> #}
+
+  
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}

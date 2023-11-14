@@ -1,0 +1,230 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  End to end simple allow journey
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Index
+      </h1>
+
+   <ol class="app-task-list">
+
+     <li>
+                        <h2 class="app-task-list__section">
+                            <span class="app-task-list__section-number">1. </span> Date of claim
+                        </h2>
+                        <ul class="app-task-list__items">
+                            {{ taskListItem({
+                                name: 'Start page',
+                                url: 'start-page',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'in live',
+                                    color: 'green'
+                                }
+                            })}}
+                               {{ taskListItem({
+                                name: 'Disclaimer',
+                                url: 'disclaimer',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'in live',
+                                    color: 'green'
+                                }
+                            })}}
+                            {# {{ taskListItem({
+                                name: 'Check address',
+                                url: 'idv/check',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'Investigation Needed',
+                                    color: 'purple'
+                                }
+                            })}} #}
+                        
+                    </li>
+
+                    <li>
+                      
+                       
+
+                          {{ taskListItem({
+                                name: 'Are you the carer?',
+                                url: 'carer',
+                                isActive: 'true',
+                                tags: [
+                                    {
+                                        text: 'Validated',
+                                        color: 'blue'
+                                    }
+                                ]
+                            })}}
+
+                          
+
+
+                            {{ taskListItem({
+                                name: 'Carer name',
+                                url: 'carer-name',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'Validated',
+                                    color: 'blue'
+                                }
+                            })}}
+
+                             {{ taskListItem({
+                                name: 'Carer date of birth',
+                                url: 'carer-dob',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'Validated',
+                                    color: 'blue'
+                                }
+                            })}}
+                            
+                              {{ taskListItem({
+                                name: 'Carer country',
+                                url: 'carer-country',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'Validated',
+                                    color: 'blue'
+                                }
+                            })}}
+
+                              {{ taskListItem({
+                                name: 'Disabled person name',
+                                url: 'dp-name',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'Validated',
+                                    color: 'blue'
+                                }
+                            })}}
+
+                           
+
+                             {{ taskListItem({
+                                name: 'Qualifying benefit',
+                                url: 'qb',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'Validated',
+                                    color: 'blue'
+                                }
+                            })}}                          
+
+                              {{ taskListItem({
+                                name: '35 hours',
+                                url: '35hours',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'Validated',
+                                    color: 'blue'
+                                }
+                            })}}
+
+
+                              {{ taskListItem({
+                                name: '35 hours',
+                                url: '35hours-date',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'to test',
+                                    color: 'red'
+                                }
+                            })}}
+                             {{ taskListItem({
+                                name: 'Claim date (started caring within 3 months)',
+                                url: 'claimdate-1',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'to test',
+                                    color: 'red'
+                                }
+                            })}}
+                             {{ taskListItem({
+                                name: 'Claim date (started caring over 3 months ago)',
+                                url: 'claimdate-2',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'to test',
+                                    color: 'red'
+                                }
+                            })}}
+                    
+                    </ul>
+                    </li>
+                  
+                  <h2 class="app-task-list__section">
+                            <span class="app-task-list__section-number">2. </span> Automated decision making content
+                        </h2>
+                    <ul class="app-task-list__items">
+                          {{ taskListItem({
+                                name: 'Application sent',
+                                url: 'confirmation-no-docs',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'to test',
+                                    color: 'red'
+                                }
+                            })}}
+                            </ul>
+
+                  <h2 class="app-task-list__section">
+                            <span class="app-task-list__section-number">3. </span> Under 16 disallow decision letters
+                        </h2>
+                    <ul class="app-task-list__items">
+                          {{ taskListItem({
+                                name: 'Current advice letter',
+                                url: 'letter-1',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'to test',
+                                    color: 'red'
+                                }
+                            })}}
+
+                              {{ taskListItem({
+                                name: 'Current decision letter',
+                                url: 'letter-2',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'to test',
+                                    color: 'red'
+                                }
+                            })}}
+
+                             {{ taskListItem({
+                                name: 'New decision letter',
+                                url: 'letter-3',
+                                isActive: 'true',
+                                tag: {
+                                    text: 'to test',
+                                    color: 'red'
+                                }
+                            })}}
+                            </ul>
+
+                </ol>
+    
+    </div>
+</div>
+
+{% endblock %}

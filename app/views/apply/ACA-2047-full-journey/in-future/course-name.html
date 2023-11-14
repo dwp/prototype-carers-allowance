@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="start-date">
+        {{ govukInput({
+          name: 'courseNamePast',
+          value: data.courseNamePast,
+          label: {
+            text: "What is the name of the course you will be studying?",
+            isPageHeading: true,
+            classes: "govuk-label--l"
+          },
+          hint: {
+            text: 'Tell us the course name, or if there are multiple subjects, tell us the qualification you will be studying for - for example, GCSEs or A-levels. If you do not know, you can leave it blank.'
+          }
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

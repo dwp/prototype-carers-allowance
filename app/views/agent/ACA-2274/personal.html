@@ -1,0 +1,100 @@
+{% extends 'layout-agent.html' %}
+
+{% block pageTitle %}
+  Find someone
+{% endblock %}
+
+{% block content %}
+<br>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+        <h1 class="govuk-heading-xl">
+         Jack Sparrow
+          <span class="govuk-caption-xl">QQ 12 34 56 X</span>
+        
+            <strong class="govuk-tag govuk-tag--red">
+                Disallowed - under 16
+            </strong>
+      </h1>
+   
+   <h2 class="govuk-heading-m">Personal details<h2>
+
+<table class="govuk-table">
+<tbody class="govuk-table__body">
+          {# <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width: 50%">Full name</th>
+            <td class="govuk-table__cell" style="width: 50%">Phoebe Hannigan</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="change-name">
+              Change
+            </a></td> 
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">National Insurance number</th>
+            <td class="govuk-table__cell">QQ 12 34 56 X</td>
+            <td class="govuk-table__cell"></td>
+          </tr>  #}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width: 50%">Date of birth</th>
+            <td class="govuk-table__cell" style="width: 50%">12 December 2009</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width= 50%">Age</th>
+            <td class="govuk-table__cell">15 years 7 months</td>
+             <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+         <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Address</th>
+            <td class="govuk-table__cell">Some Street<br>Some City</td>
+            <td class="govuk-table__cell"><td class="govuk-table__cell"><a class="govuk-link" href="address-change">
+              Change
+            </a></td></td>
+          </tr>
+           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Email address</th>
+            <td class="govuk-table__cell">jack.sparrow@gmail.com</td>
+            <td class="govuk-table__cell"><td class="govuk-table__cell"><a class="govuk-link" href="change-name">
+              Change
+            </a></td></td>
+          </tr>
+        
+
+        </tbody>
+        </table>
+
+           <h2 class="govuk-heading-m">Claim dates<h2>
+
+<table class="govuk-table">
+<tbody class="govuk-table__body">
+           <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width: 40%">Received</th>
+            <td class="govuk-table__cell">17 April 2023</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Decision made</th>
+            <td class="govuk-table__cell" style="width: 50%">17 April 2023</td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+        
+        
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Notification sent</th>
+            <td class="govuk-table__cell">17 April 2023</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="change-name">
+              Details
+            </a></td>
+          </tr>
+        
+
+        </tbody>
+        </table>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

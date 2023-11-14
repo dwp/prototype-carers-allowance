@@ -1,0 +1,95 @@
+{% extends 'layout_email.html' %}
+
+{% block pageTitle %}
+    Email: NI no docs needed
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            {% set emailContentHTML %}
+
+                <h2 class="govuk-heading-m">Carer’s Allowance – change of details</h2>
+
+                <p>The Department for Communities (DfC) has received your change.</p>
+
+                <p>If we need more information about this, we will contact you by phone or post.</p>
+
+                <p>You do not have to do anything else, unless you need to report another change.</p>
+
+                <h2 class="govuk-heading-m">If you need to report another change</h2>
+
+                <p>You can report a change online at <a href="https://www.nidirect.gov.uk/services/carers-allowance-report-changes-online">https://www.nidirect.gov.uk/services/carers-allowance-report-changes-online</a>.</p>
+
+                <p>You can also report a change by phone or post:</p>
+
+                <div class="govuk-inset-text">
+
+                <p>Telephone: 0800 587 0912</p>
+
+                <p>Carer’s Allowance<br>
+                    Disability and Carers Service<br>
+                    Mail Opening Unit<br>
+                    PO Box 42<br>
+                    Limavady<br>
+                    BT49 4AN</p>
+
+                </div>
+
+                <p>You cannot report a change by email.</p>
+
+                <h2 class="govuk-heading-m">Email contact policy</h2>
+
+                <p>Do not reply to this email.</p>
+
+                <p>Emails sent to this mailbox are not monitored and will be automatically deleted.</p>
+
+                <p>DfC does not ask for personal or confidential information by email.</p>
+
+                <p>For office use only – appVersion/schemaVersion/transactionId</p>
+
+
+            {% endset %}
+
+
+            {{ prototypeEmailPreview({
+                headers: [
+                    {
+                        key: {
+                            text: 'From'
+                        },
+                        value: {
+                            text: 'Apply and Maintain Carers Allowance'
+                        }
+                    },
+                    {
+                        key: {
+                            text: 'To'
+                        },
+                        value: {
+                            text: 'test@test.com'
+                        }
+                    },
+                    {
+                        key: {
+                            text: 'Subject'
+                        },
+                        value: {
+                            text: 'Changes to your Carer’s Allowance'
+                        }
+                    }
+                ],
+                content: {
+                    html: emailContentHTML
+                }
+            }) }}
+            
+
+        </div>
+
+</div>
+
+{% endblock %}

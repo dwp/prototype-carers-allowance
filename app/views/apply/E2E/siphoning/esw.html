@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Have you lived in England, Scotland or Wales for at least 2 of the last 3 years?
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form method="post">
+
+                {{ govukRadios({
+                    idPrefix: 'elig--qb',
+                    name: 'elig--qb',
+                    fieldset: {
+                        legend: {
+                            text: 'Have you lived in England, Scotland or Wales for at least 2 of the last 3 years?',
+                            isPageHeading: true,
+                            classes: 'govuk-fieldset__legend--l'
+                        }
+                    },
+                   
+                    
+                    items: [
+                        {
+                            text: 'Yes',
+                            value: 'Yes~https://dth-prototype.herokuapp.com/auth/v8/register/start-rmd?service-name=Apply%20for%20Carer%27s%20Allowance'
+                        },
+                        {
+                            text: 'No',
+                            value: 'No~/poc/E2E/siphoning/reside'
+                        }
+                     
+                    ]
+                }) }}
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

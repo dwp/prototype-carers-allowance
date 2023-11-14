@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form method="post">
+
+                {{ govukRadios({
+                    idPrefix: 'educationPlanning',
+                    name: 'educationPlanning',
+                    fieldset: {
+                        legend: {
+                            text: 'Will you be starting a course of education in the next 3 months?',
+                            isPageHeading: true,
+                            classes: 'govuk-fieldset__legend--l'
+                        }
+                    },
+
+                    
+                        hint: {
+                            text: "For example, if you are due to start sixth-form, college or university."
+                        },
+                    
+                    items: [
+                        {
+                            text: 'Yes',
+                            value: 'yes~/apply/ACA-2047-full-journey/in-past/open-university-planning'
+                        },
+                      
+                         {
+                            text: 'No',
+                            value: 'no~/apply/ACA-2047-full-journey/employment'
+                        }
+                    ]
+                }) }}
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="other-carer-dob">
+
+               <h1 class="govuk-heading-l">What is the name of the other person caring for Susan Grainger?</h1>
+
+                {{ govukInput({
+                label: {
+                    text: "Full name"
+                },
+                id: "full-name",
+                name: "full-name",
+                autocomplete: "name",
+                spellcheck: false
+                }) }}                  
+
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

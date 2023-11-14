@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Based on the country you live in, you are not eligible for Carer's Allowance - Apply for Carer’s Allowance
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+        <h1 class="govuk-heading-l">
+          Based on your address, you cannot get Carer’s Allowance
+
+        </h1>
+
+        <p class="govuk-body">
+          
+          Carer’s Allowance is being replaced by Carer Support Payment in Scotland, over the next year.
+
+          <br><br> Your address is in one of the pilot areas for this new benefit, meaning you can no longer get Carer’s Allowance. You should apply for Carer Support Payment instead.
+
+
+        </p>
+
+
+        {{ govukButton({
+          html: 'Apply for Carer Support Payment'
+        }) }}
+
+
+        <h2 class="govuk-heading-m">
+          If you still want to continue your application
+        </h2>
+
+        <p class="govuk-body">
+          You are still legally allowed to <a href="claim-date">continue applying for Carer's Allowance</a>, even though you are not eligible for it.
+        </p>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

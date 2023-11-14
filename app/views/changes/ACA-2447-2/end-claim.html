@@ -1,0 +1,95 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  What benefit does the person you provide care for get?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="email-confirmation">
+  <input type="hidden" name="_csrf" value="QZY72P8H-WGviPEW5mPreoFMMBhzItRZ3xHA">
+  
+
+    <h1 class="govuk-heading-l" data-gtm-vis-recent-on-screen-8013095_924="21" data-gtm-vis-first-on-screen-8013095_924="21" data-gtm-vis-total-visible-time-8013095_924="100" data-gtm-vis-has-fired-8013095_924="1">End your Carer's Allowance claim</h1>
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" role="group" aria-describedby="f-dateStoppedCaring-hint">
+  
+  <legend class="govuk-fieldset__legend govuk-!-font-weight-bold">
+    What is the last date of your claim? 
+  </legend>
+  <div id="f-dateStoppedCaring-hint" class="govuk-hint">
+    This could be the date you permanently stopped providing care, or the date you want your claim to end.
+  </div>
+
+
+  <div class="govuk-date-input" id="f-dateStoppedCaring">
+    
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="f-dateStoppedCaring[dd]">
+          Day
+        </label>
+      
+      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="f-dateStoppedCaring[dd]" name="dateStoppedCaring[dd]" type="text" pattern="[0-9]*" inputmode="numeric">
+      </div>
+    </div>
+  
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="f-dateStoppedCaring[mm]">
+          Month
+        </label>
+      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="f-dateStoppedCaring[mm]" name="dateStoppedCaring[mm]" type="text" pattern="[0-9]*" inputmode="numeric">
+      </div>
+    </div>
+  
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="f-dateStoppedCaring[yyyy]">
+          Year
+        </label>
+      
+      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="f-dateStoppedCaring[yyyy]" name="dateStoppedCaring[yyyy]" type="text" pattern="[0-9]*" inputmode="numeric">
+      </div>
+    </div>
+  </div>
+</fieldset>
+</div>
+
+
+<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="3000">
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-font-weight-bold" for="f-moreAboutYourChanges">
+    Tell us more about your changes (optional)
+  </label> 
+  <div id="f-moreAboutYourChanges-hint" class="govuk-hint">
+    If you did not tell us about any of your changes as soon as they happened, we need you to tell us why.
+  </div>
+  <textarea class="govuk-textarea govuk-js-character-count" id="f-moreAboutYourChanges" name="moreAboutYourChanges" rows="5" aria-describedby="f-moreAboutYourChanges-info f-moreAboutYourChanges-hint"></textarea><div id="f-moreAboutYourChanges-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 3000 characters remaining</div>
+</div>
+</div>
+
+  
+ {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+       
+
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}

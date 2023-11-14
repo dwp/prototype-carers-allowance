@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Have you always lived in England, Scotland or Wales?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+       
+        {{ govukRadios ({
+          idPrefix: 'applicantAlwaysLivedESW',
+          name: 'applicantAlwaysLivedESW',
+          fieldset: {
+            legend: {
+              text: 'Have you always lived in England, Scotland or Wales?',
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--l'
+            }
+          },
+          items: [
+            {
+              text: 'Yes',
+              value: 'Yes',
+              checked: true if data['applicantAlwaysLivedESW'] == 'Yes'
+            },
+            {
+              text: 'No',
+              value: 'No',
+              checked: true if data['applicantAlwaysLivedESW'] == 'No'
+            }
+          ]
+        }) }}
+
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

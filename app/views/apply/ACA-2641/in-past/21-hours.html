@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form method="post">
+
+                {{ govukRadios({
+                    idPrefix: '21hours',
+                    name: '21hours',
+                    fieldset: {
+                        legend: {
+                            text: 'Do you spend at least 21 hours each week doing supervised study?',
+                            isPageHeading: true,
+                            classes: 'govuk-fieldset__legend--l'
+                        }
+                    },
+
+                    
+                        hint: {
+                            text: "Supervised study includes any time in class, and any compulsory work to be completed outside of class."
+                        },
+                    
+                    items: [
+                        {
+                            text: 'Yes',
+                            value: 'yes~/apply/ACA-2047-full-journey/in-past/exemptions'
+                        },
+                      
+                         {
+                            text: 'No',
+                            value: 'no~/apply/ACA-2047-full-journey/in-past/where-studying'
+                        }
+                    ]
+                }) }}
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

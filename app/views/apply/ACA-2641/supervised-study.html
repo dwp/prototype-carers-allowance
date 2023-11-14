@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="approved-break">
+
+  {% set formHTML %}
+          <p> <b>We will send you a form...</p>
+
+        {% endset %}
+
+
+                {{ govukRadios({
+                    idPrefix: 'supervisedStudy',
+                    name: 'supervisedStudy',
+                    fieldset: {
+                        legend: {
+                            text: 'Do you spend at least 21 hours each week doing supervised study?',
+                            isPageHeading: true,
+                            classes: 'govuk-fieldset__legend--l'
+                        }
+                    },
+
+                    
+                    
+                    items: [
+                        {
+                            text: 'Yes',
+                            value: 'yes~/apply/ACA-2641/approved-break'
+                        },
+                      
+                         {
+                            text: 'No',
+                            value: 'no~',
+                            conditional: {
+                            html: formHTML
+                            }
+                        }
+                    ]
+                }) }}
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

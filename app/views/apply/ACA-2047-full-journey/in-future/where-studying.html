@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="course-name">
+
+        {% set yesHtml %}
+        {{ govukInput({
+          name: 'WhereStudying',
+          value: data.WhereStudying,
+          label: {
+            text: "Where will you be studying?",
+            isPageHeading: true,
+            classes: "govuk-label--s"
+          }
+        }) }}
+        {% endset -%}
+
+
+
+
+        {{ govukRadios({
+                    idPrefix: 'exemptions',
+                    name: 'exemptions',
+                    fieldset: {
+                        legend: {
+                            text: 'Do you know where you will be studying?',
+                            isPageHeading: true,
+                            classes: 'govuk-fieldset__legend--l'
+                        }
+                    },
+                    
+                    hint: {
+                      text: 'For example, the name of the university, college, school or other organisation that provides your course of education.'
+                    },
+        
+                    items: [
+                        {
+                            text: 'Yes',
+                            value: 'yes~/apply/ACA-2047-full-journey/in-future/course-name',
+                                conditional: {
+                                    html: yesHtml
+                                 }
+                        },
+                      
+                         {
+                            text: 'No',
+                            value: 'no~/apply/ACA-2047-full-journey/employment'
+                        }
+                    ]
+                }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+{% import 'macros/data-helpers.njk' as helpers %}
+{% block pageTitle %}
+  Carer's Allowance claim start date
+{% endblock %}
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% set dateStartedCaring = data | dateStartedCaring(data) %}
+{% set dateStartedCaring = data | dateStartedCaring(data) %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post" action="end">
+        
+        <h1 class="govuk-heading-l">Carer's Allowance claim start date</h1>
+        <p>
+          You said you started providing care for 35 hours a week on <b>{{ dateStartedCaring }}</b>. 
+          <br><br>
+          This means you may be able to backdate your claim to that date, as long as {{ data['dp-first-name'] +' '+ data['dp-last-name'] }} 
+          was getting their disability benefit then. If not, you can backdate up to when their benefit started.
+          <br>
+            <br>
+              Your claim date cannot be later than {{ data| dateThreeMonthsAhead }}.
+              
+        {{ govukDateInput({
+          id: "providing-care",
+          namePrefix: "providing-care",
+          fieldset: {
+            legend: {
+              text: "When do you want your Carer's Allowance claim to start?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          }
+
+        }) }}
+                            {{ govukButton({
+          html: 'Continue'
+        }) }}
+                          </form>
+                        </div>
+                      </div>
+                    {% endblock %}

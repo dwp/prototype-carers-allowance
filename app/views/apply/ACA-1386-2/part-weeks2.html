@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+{% set breakIndex = data['selectedBreak'] | uuid %}
+{% set breakLoc = 'breaksStore[' + breakIndex + ']' %}
+{% set break = data.breaksStore[breakIndex] %}
+{% block pageTitle %}
+   Did you provide care for at least 35 hours between Sunday 23 January 2022 and Saturday 29 January 2022?
+{% endblock %}
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="list-2">
+               
+               <h1 class="govuk-heading-l">Did you provide care for at least 35 hours between Wednesday 26 January 2022 and Saturday 29 January 2022?</h1>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Why we ask this question
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    For Carer’s Allowance, a week runs from Sunday to Saturday.<br><br> The date you started providing care again is part-way through a week. We need to know if you still provided at least 35 hours of care in that week.
+
+
+  </div>
+</details>              
+
+
+{{ govukRadios({
+  idPrefix: "second-part-week",
+  name: "second-part-week",
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+               
+                    <button class="govuk-button" data-module="govuk-button" href="medical">
+                    Continue
+                     </button>
+            </form>
+        </div>
+</div>
+{% endblock %}

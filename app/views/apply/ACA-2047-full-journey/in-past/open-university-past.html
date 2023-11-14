@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form method="post">
+
+               {{ govukRadios({
+                    idPrefix: 'openUni',
+                    name: 'openUni',
+                    fieldset: {
+                        legend: {
+                            text: "Was this course with ‘The Open University?'",
+                            isPageHeading: true,
+                            classes: 'govuk-fieldset__legend--l'
+                        }
+                    },
+                    
+                        hint: {
+                            text: 'This refers to the specific organisation called The Open University.'
+                        },
+
+                    
+                    
+                    items: [
+                        {
+                            text: 'Yes',
+                            value: 'yes~/apply/ACA-2047-full-journey/employment'
+                        },
+                      
+                         {
+                            text: 'No',
+                            value: 'no~/apply/ACA-2047-full-journey/in-past/21-hours-past'
+                        }
+                    ]
+                }) }}
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+{% import 'macros/data-helpers.njk' as helpers %}
+{% block pageTitle %}
+  Carer's Allowance claim start date
+{% endblock %}
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post" action="national-insurance-number">
+        <h1 class="govuk-heading-l">Carer's Allowance claim start date</h1>
+       <p> 
+            You may be able to backdate your claim for up to <b>{{ data| dateThreeMonthsAgo }}</b> (3 months), 
+            as long as {{ data | getDpName }} was getting their disability benefit then. If not, you can backdate up to when their benefit 
+            started.
+
+            </p>
+          
+       
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    If {{ data | getDpName }}'s disability benefit was backdated to more than 3 months ago
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                 If {{ data | getDpName }}’s disability benefit was awarded after {{ data| dateThreeMonthsAgo }} 
+                 and backdated to before this date, you can either claim from: 
+                 <br>
+                <br>
+                     
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>their benefit start date - if you were providing care for 35 hours a week then</li>
+                            <li>the date you started to provide care for 35 hours a week - if this was after their benefit start date</li>
+                          </ul>
+                </div>
+                            </details>
+
+                             <p> Your claim date cannot be after {{ data| dateThreeMonthsAhead }}. 
+                   
+          </p>
+                            {{ govukDateInput({
+          id: "carerClaimStart",
+          namePrefix: "carerClaimStart",
+          fieldset: {
+            legend: {
+              text: "When do you want your Carer's Allowance claim to start?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          }
+
+        }) }}
+                            {{ govukButton({
+                                html: 'Continue'
+                              }) }}
+                          </form>
+                        </div>
+                      </div>
+                    {% endblock %}

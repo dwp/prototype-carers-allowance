@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  What is your telephone number?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="oidv">
+
+        <h1 class="govuk-heading-l">Continue to report your change</h1>
+
+
+        <p>You can still tell us that you want to end your claim for Carer’s Allowance, even though we have been unable to verify your details.</p>
+        <p>We will have to ask you some questions again so that your request can be processed manually.</p>
+
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Help with nationality
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    You can still <a href="">tell us that you want to end your claim for Carer’s Allowance</a>, even though we have been unable to verify your details.
+<br><br>
+We will have to ask you some questions again so that your request can be processed manually.
+  </div>
+</details>
+  
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}

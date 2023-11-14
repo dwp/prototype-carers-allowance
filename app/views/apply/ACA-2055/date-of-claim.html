@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+    We need to know about any breaks in care
+{% endblock %}
+{% block beforeContent %} 
+    {{ super() }}
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form method="post" action="check-answers4">
+           
+                   <h1 class="govuk-heading-l">Your Carer’s Allowance claim date cannot be more than 3 months in the future</h1>
+
+                   <p class="govuk-body">You entered your claim date as <b>[DATE]</b>, meaning you will not get Carer’s Allowance. You can only apply for up to 3 months in the future.
+                  </p>
+                       
+
+
+                   {{ govukRadios({
+                    name: "date-of-claim",
+                    fieldset: {
+                      legend: {
+                        text: "Do you want to change your claim date?",
+                        isPageHeading: true,
+                        classes: "govuk-fieldset__legend--m"
+                      }
+                    },
+                    items: [
+                      {
+                        value: "yes",
+                        text: "Yes"
+                      },
+                      {
+                        value: "no",
+                        text: "No, I want to claim using this date"
+                      }
+                    ]
+                  }) }}
+                
+                {{ govukButton ({
+                    html: 'Continue',
+                    classes: 'govuk-button'
+                }) }}
+
+            </form>
+        </div>
+</div>
+{% endblock %}

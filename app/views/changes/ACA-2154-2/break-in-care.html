@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Break in care
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="break-in-care-date">
+        <h1 class="govuk-heading-l">Report a break in care</h1>
+
+        <p>
+          A break in care is any time you have not provided care for at least 35 hours in a week. For Carer's Allowance, a week is Sunday morning to Saturday night.
+        </p>
+
+        <p>
+            Breaks in care can include any times where you or the person you provide care for were:
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  in hospital
+                </li>
+                <li>
+                  In respite care or care home
+                </li>
+                <li>
+                  on holiday
+                </li>
+              
+              </ul>
+        </p>
+<br>
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form method="post">
+
+                {{ govukRadios({
+                    idPrefix: 'educationStill',
+                    name: 'educationStill',
+                    fieldset: {
+                        legend: {
+                            text: 'Where are you studying?',
+                            isPageHeading: true,
+                            classes: 'govuk-fieldset__legend--l'
+                        }
+                    },
+
+                    
+                    
+                    items: [
+                        {
+                            text: 'School',
+                            value: 'school~/apply/ACA-2641/disallow'
+                        },
+                      
+                         {
+                            text: 'Sixth form',
+                            value: 'sixth-form~/apply/ACA-2641/disallow'
+                        },
+                         {
+                            text: 'College',
+                            value: 'college~/apply/ACA-2641/full-time'
+                        },
+                         {
+                            text: 'University',
+                            value: 'university~/apply/ACA-2641/full-time'
+                        },
+                         {
+                            text: 'Other',
+                            value: 'other~/apply/ACA-2641/full-time'
+                        }
+                    ]
+                }) }}
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

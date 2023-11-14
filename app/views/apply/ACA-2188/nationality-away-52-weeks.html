@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  About your nationality and where you live
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+
+   
+
+        {{ govukRadios ({
+          idPrefix: 'applicantBeenAway',
+          name: 'applicantBeenAway',
+          fieldset: {
+            legend: {
+              text: 'Have you been away from England, Scotland or Wales for more than 52 weeks since (claim date minus 3 years)?',
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--l'
+            }
+          },
+          hint: {
+            text: 'This could be one trip, or a number of trips adding up to 52 weeks.'
+          },
+          items: [
+            {
+              text: 'Yes',
+              value: 'Yes',
+              checked: true if data['applicantBeenAway'] == 'Yes'
+            },
+            {
+              text: 'No',
+              value: 'No',
+              checked: true if data['applicantBeenAway'] == 'No'
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

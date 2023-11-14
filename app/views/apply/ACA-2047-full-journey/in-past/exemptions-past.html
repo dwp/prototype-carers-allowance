@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form method="post">
+
+                {% set yesHtml %}
+                    <p>You will need to provide evidence showing you were granted an exemption or an approved break.<p>
+                  {% endset -%}
+
+                {{ govukRadios({
+                    idPrefix: 'exemptionsPast',
+                    name: 'exemptionsPast',
+                    fieldset: {
+                        legend: {
+                            text: 'Were you granted any exemptions from this course, or did you have an approved break?',
+                            isPageHeading: true,
+                            classes: 'govuk-fieldset__legend--l'
+                        }
+                    },
+
+                    
+                    
+                    items: [
+                        {
+                            text: 'Yes',
+                            value: 'yes~/apply/ACA-2047-full-journey/in-past/where-studying-past',
+                            conditional: {
+                                    html: yesHtml
+                                 }
+                        },
+                      
+                         {
+                            text: 'No',
+                            value: 'no~/apply/ACA-2047-full-journey/in-past/where-studying-past'
+                        }
+                    ]
+                }) }}
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

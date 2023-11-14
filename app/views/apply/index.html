@@ -1,0 +1,1132 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Prototypes: Apply for Carer's Allowance
+{% endblock %}
+{% block header %}
+  {{ super() }}
+{% endblock %}
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back to prototype home',
+    href: '/'
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Prototypes for research</h1>
+      <br>
+        <br>
+
+ <div class="app-most-recent">
+            <strong class="govuk-tag govuk-tag--yellow">
+             in progress
+            </strong>
+            <br><br>
+            <h2 class="govuk-heading-m">Eligibility kick-outs MVP
+            </h2>
+              {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Date of design</dt>
+                    <dd class="govuk-body" style="margin-left:0%">November 2023</dd>
+                  </dl>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Designers</dt>
+                    <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                  </dl>
+                </div>
+              </div>
+              {# <h3 class="govuk-heading-s">Business requirements</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>The current employment question “Have you been an employee since [claim date - 6-months]?” could be perceived by some as leading to people understanding this as being employed on that date and not at any point since that time. There is some anecdotal evidence to support this and that it is leading agents to have to do callbacks
+                </li>
+              </ul> #}
+              <h3 class="govuk-heading-s">Journey includes</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Doesn't pull through DP name
+                  <li>New analysis - we no longer have to legally allow users to apply even though we know they are not eligible
+                 <li>Linking off to third parties
+
+                </ul>
+<p>
+                <a href="/apply/ACA-2403/allowance-benefits-ineligible-mvp">Qualifying benefit kickout</a><br>
+                <a href="/apply/ACA-2403/date-of-birth-ineligible-mvp">Under 16 kickout</a><br>
+                <a href="/apply/ACA-2403/35-hours-ineligible-mvp">Under 35 hours kickout</a>
+
+
+
+                <br>
+                </div>
+
+
+          <div class="app-most-recent">
+            <strong class="govuk-tag govuk-tag--yellow">
+             in progress
+            </strong>
+            <br><br>
+            <h2 class="govuk-heading-m">Education iteration 2
+            </h2>
+              {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Date of design</dt>
+                    <dd class="govuk-body" style="margin-left:0%">October 2023</dd>
+                  </dl>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Designers</dt>
+                    <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                  </dl>
+                </div>
+              </div>
+              {# <h3 class="govuk-heading-s">Business requirements</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>The current employment question “Have you been an employee since [claim date - 6-months]?” could be perceived by some as leading to people understanding this as being employed on that date and not at any point since that time. There is some anecdotal evidence to support this and that it is leading agents to have to do callbacks
+                </li>
+              </ul> #}
+              <h3 class="govuk-heading-s">Journey includes</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Removing questions around the educational institution (we get this information on the DS740 form that gets sent out)
+                  <li>Includes kick-out screen for students in full time education
+                </ul>
+                <a href="/apply/ACA-2641/education" class="govuk-button govuk-button--start">Start now</a>
+                <br>
+                </div>
+
+
+   <div class="app-most-recent">
+            <strong class="govuk-tag govuk-tag--yellow">
+             in progress
+            </strong>
+            <br><br>
+            <h2 class="govuk-heading-m">Scottish devolution and rival carers
+            </h2>
+              {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Date of design</dt>
+                    <dd class="govuk-body" style="margin-left:0%">August 2023</dd>
+                  </dl>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Designers</dt>
+                    <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                  </dl>
+                </div>
+              </div>
+              {# <h3 class="govuk-heading-s">Business requirements</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>The current employment question “Have you been an employee since [claim date - 6-months]?” could be perceived by some as leading to people understanding this as being employed on that date and not at any point since that time. There is some anecdotal evidence to support this and that it is leading agents to have to do callbacks
+                </li>
+              </ul> #}
+              <h3 class="govuk-heading-s">Journey includes</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Scottish redirection page to CSP
+                  <li>Rival carers questions (does rival carer get CSP)
+                    <li>Trimmed down application (no education, breaks in care, income etc)
+
+                </ul>
+                <a href="/apply/ACA-2403/start-page" class="govuk-button govuk-button--start">Start now</a>
+                <br>
+                
+                </div>
+
+         <div class="app-most-recent">
+            <strong class="govuk-tag govuk-tag--green">
+            tried and tested
+            </strong>
+            <br><br>
+            <h2 class="govuk-heading-m">Education redesign full journey
+            </h2>
+              {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Date of design</dt>
+                    <dd class="govuk-body" style="margin-left:0%">June 2023</dd>
+                  </dl>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Designers</dt>
+                    <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                  </dl>
+                </div>
+              </div>
+              {# <h3 class="govuk-heading-s">Business requirements</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>The current employment question “Have you been an employee since [claim date - 6-months]?” could be perceived by some as leading to people understanding this as being employed on that date and not at any point since that time. There is some anecdotal evidence to support this and that it is leading agents to have to do callbacks
+                </li>
+              </ul> #}
+              <h3 class="govuk-heading-s">End to end journey includes</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Under 16 disallow
+                  <li>Date of claim
+                    <li>Carer's, DP, Parter details
+                      <li>Education redesign
+                        <li>Decision notification preference
+                </ul>
+
+                 <h3 class="govuk-heading-s">Key research outcomes</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>When testing the old journey in live 3/3 participants failed the usability test and did not complete the journey correctly
+                  <li>This new journey had minimal usability issues for 5/5 participants  
+                </ul>
+
+                <a href="/apply/ACA-2047-full-journey/start-page" class="govuk-button govuk-button--start">Start now</a>
+                <br>
+                
+                </div>
+
+
+         <div class="app-most-recent">
+            <strong class="govuk-tag govuk-tag--green">
+             tried and tested
+            </strong>
+            <br><br>
+            <h2 class="govuk-heading-m">Under 16 disallow journey
+            </h2>
+              {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Date of design</dt>
+                    <dd class="govuk-body" style="margin-left:0%">May 2023</dd>
+                  </dl>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Designers</dt>
+                    <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                  </dl>
+                </div>
+              </div>
+              {# <h3 class="govuk-heading-s">Business requirements</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>The current employment question “Have you been an employee since [claim date - 6-months]?” could be perceived by some as leading to people understanding this as being employed on that date and not at any point since that time. There is some anecdotal evidence to support this and that it is leading agents to have to do callbacks
+                </li>
+              </ul> #}
+              <h3 class="govuk-heading-s">End to end journey includes</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Under 16 disallow
+                  <li>Date of claim
+                    <li>Carer's, DP, Parter details
+                      <li>Education
+                        <li>Decision notification preferences
+
+                </ul>
+
+<h3 class="govuk-heading-s">Research key outcomes</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>The journey is not suitable for under 16s e.g. asking partner details
+                  <li>Users did not understand what a nino was
+                    <li>Users could not complete education section successfully
+                   
+
+                </ul>
+
+                <a href="/apply/ACA-2272/start-page" class="govuk-button govuk-button--start">Start now</a>
+                <br></div>
+
+
+         <div class="app-most-recent">
+            <strong class="govuk-tag govuk-tag--yellow">
+             in progress
+            </strong>
+            <br><br>
+            <h2 class="govuk-heading-m">Date of claim MVP
+            </h2>
+              {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Date of design</dt>
+                    <dd class="govuk-body" style="margin-left:0%">May 2023</dd>
+                  </dl>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Designers</dt>
+                    <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                  </dl>
+                </div>
+              </div>
+              {# <h3 class="govuk-heading-s">Business requirements</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>The current employment question “Have you been an employee since [claim date - 6-months]?” could be perceived by some as leading to people understanding this as being employed on that date and not at any point since that time. There is some anecdotal evidence to support this and that it is leading agents to have to do callbacks
+                </li>
+              </ul> #}
+              <h3 class="govuk-heading-s">UI changes</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>First iteration - not pulling through DPs name
+
+                </ul>
+                <a href="/apply/ACA-2250/35-hours" class="govuk-button govuk-button--start">Start now</a>
+                <br></div>
+
+
+        <div class="app-most-recent">
+            <strong class="govuk-tag govuk-tag--yellow">
+             in progress
+            </strong>
+            <br><br>
+            <h2 class="govuk-heading-m">Scottish devolution
+            </h2>
+              {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Date of design</dt>
+                    <dd class="govuk-body" style="margin-left:0%">Mar 2023</dd>
+                  </dl>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Designers</dt>
+                    <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                  </dl>
+                </div>
+              </div>
+              {# <h3 class="govuk-heading-s">Business requirements</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>The current employment question “Have you been an employee since [claim date - 6-months]?” could be perceived by some as leading to people understanding this as being employed on that date and not at any point since that time. There is some anecdotal evidence to support this and that it is leading agents to have to do callbacks
+                </li>
+              </ul> #}
+              <h3 class="govuk-heading-s">UI changes</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Moving eligibility questions as part of the claim journey - including one thing per page and new kickout screens
+                </li>
+                <li>Combining 'before you start' screen and 'you may be eligible' screen at the beginning of the journey</li>
+                <li>if user clicks they live in Scotland - ask their address to kick out early (business requirement will be to kick out based on Scottish postcode at first)
+                  <li> new kickout screen for Scotland
+
+                </ul>
+                <a href="/apply/ACA-2173/start-page" class="govuk-button govuk-button--start">Start now</a>
+                <br></div>
+
+
+          <div class="app-most-recent">
+            <strong class="govuk-tag govuk-tag--red">
+              Ready for UR
+            </strong>
+            <br><br>
+            <h2 class="govuk-heading-m">Date of claim - iteration 2
+              <br>
+              ADM content
+              <br>
+                Under 16 disallow letters</h2>
+              {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Date of design</dt>
+                    <dd class="govuk-body" style="margin-left:0%">Mar 2023</dd>
+                  </dl>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                  <dl>
+                    <dt class="govuk-heading-s">Designers</dt>
+                    <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                  </dl>
+                </div>
+              </div>
+              {# <h3 class="govuk-heading-s">Business requirements</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>The current employment question “Have you been an employee since [claim date - 6-months]?” could be perceived by some as leading to people understanding this as being employed on that date and not at any point since that time. There is some anecdotal evidence to support this and that it is leading agents to have to do callbacks
+                </li>
+              </ul> #}
+              <h3 class="govuk-heading-s">Date of claim UI changes</h3>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Research showed from the previous iteration users didn't understand where the date provided came from
+                </li>
+                <li>This iteration focuses on providing the rules for the user to determine when they can claim from
+                </ul>
+                <a href="/apply/ACA-2165/index" class="govuk-button govuk-button--start">Start now</a>
+                <br></div>
+
+
+
+                <div class="app-most-recent">
+                   <strong class="govuk-tag govuk-tag--red">
+                      Ready for UR
+                    </strong>
+                    <br><br>
+                  <h2 class="govuk-heading-m">Education redesign</h2>
+                  {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-third">
+                      <dl>
+                        <dt class="govuk-heading-s">Date of design</dt>
+                        <dd class="govuk-body" style="margin-left:0%">Feb 2023</dd>
+                      </dl>
+                    </div>
+                    <div class="govuk-grid-column-one-third">
+                      <dl>
+                        <dt class="govuk-heading-s">Designers</dt>
+                        <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <h3 class="govuk-heading-s">UI Changes</h3>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Breaking the questions down to one thing per page
+                      <li>Having 3 different journeys based on the date the user wants to claim from - changing the tense of the questions and
+                        what needs to be asked
+                      </ul>
+                      <p>
+                        Date of claim in the past:</p>
+                      <a href="aca-2047/in-past/education" class="govuk-button govuk-button--start">Start now</a>
+                      <br>
+                        <p>
+                          Date of claim today:</p>
+                        <a href="aca-2047/today/education" class="govuk-button govuk-button--start">Start now</a>
+                        <br>
+                          <p>
+                            Date of claim in the future:</p>
+                          <a href="aca-2047/in-future/education" class="govuk-button govuk-button--start">Start now</a>
+                          <br></div>
+                         
+                         
+                         
+                          <div class="app-most-recent">
+                             <strong class="govuk-tag govuk-tag--green">
+                                tried and Tested
+                              </strong>
+                              <br><br>
+                            <h2 class="govuk-heading-m">New eligibility kickouts <br>Decision notification preference designs<br>ADM content</h2>
+                            {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                            <div class="govuk-grid-row">
+                              <div class="govuk-grid-column-one-third">
+                                <dl>
+                                  <dt class="govuk-heading-s">Date of research</dt>
+                                  <dd class="govuk-body" style="margin-left:0%">Feb 2023</dd>
+                                </dl>
+                              </div>
+                              <div class="govuk-grid-column-one-third">
+                                <dl>
+                                  <dt class="govuk-heading-s">Designers</dt>
+                                  <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                </dl>
+                              </div>
+                            </div>
+                            <h3 class="govuk-heading-s">UI changes</h3>
+                            <ul class="govuk-list govuk-list--bullet">
+                              <li>improvements to the content of the eligibility kick out pages
+                              </li>
+                              <li>eligibility questions one thing per page
+                              </li>
+                              <li>adding in a questiont to ask users how they would like there application decision (email or letter)
+                              </li>
+                              <li>DPIA states we need to include some content telling users their decision may be made automatically (ADM content)</li>
+                            </ul>
+                            <a href="/apply/ACA-2107/dp-name" class="govuk-button govuk-button--start">Start now</a>
+                            <br></div>
+                           
+                           
+                            <div class="app-most-recent">
+                              <strong class="govuk-tag govuk-tag--green">
+                                Tried and Tested
+                              </strong><br><br>
+                              <h2 class="govuk-heading-m">Check your answers - removing education data</h2>
+                              {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                              <div class="govuk-grid-row">
+                                <div class="govuk-grid-column-one-third">
+                                  <dl>
+                                    <dt class="govuk-heading-s">Date of design</dt>
+                                    <dd class="govuk-body" style="margin-left:0%">Jan 2023</dd>
+                                  </dl>
+                                </div>
+                                <div class="govuk-grid-column-one-third">
+                                  <dl>
+                                    <dt class="govuk-heading-s">Designers</dt>
+                                    <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                  </dl>
+                                </div>
+                              </div>
+                              <h3 class="govuk-heading-s">UI changes</h3>
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>Warning users if they change an answer from yes to no - that their previously entered data will be deleted
+                                </li>
+                              </ul>
+                              <a href="/apply/ACA-2072/education-remove" class="govuk-button govuk-button--start">Start now</a>
+                              <br></div>
+
+
+
+
+                                <div class="app-most-recent">
+                                   <strong class="govuk-tag govuk-tag--red">
+                                      Ready for UR
+                                    </strong>
+                                    <br><br>
+                                  <h2 class="govuk-heading-m">Disabled person and partner details redesign</h2>
+                                  {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                  <div class="govuk-grid-row">
+                                    <div class="govuk-grid-column-one-third">
+                                      <dl>
+                                        <dt class="govuk-heading-s">Date of design</dt>
+                                        <dd class="govuk-body" style="margin-left:0%">January 2023</dd>
+                                      </dl>
+                                    </div>
+                                    <div class="govuk-grid-column-one-third">
+                                      <dl>
+                                        <dt class="govuk-heading-s">Designers</dt>
+                                        <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                      </dl>
+                                    </div>
+                                  </div>
+                                  <h3 class="govuk-heading-s">Design</h3>
+                                  <ul class="govuk-list govuk-list--bullet">
+                                    <li>Disabled person and partner relationship to the carer and data capture
+                                      <li>Using one thing per page design principle
+                                        <li>Asking for the relationship of the DP to the carer upfront to tailor the questions better
+                                          <li>Creating different journeys for whether the date of claim is in the past, today or in the future
+                                            <li>Do not ask for the partner's details separately if we know the DP is the parter
+                                            </ul>
+                                            <p>
+                                              <b>Scenario 1:</b>
+                                              <br>- Disabled person is the carer's partner
+                                                <br>- They live at the same address</p>
+                                                <a href="aca-2046/scenario-1/dp-name" class="govuk-button govuk-button--start">Start now</a>
+                                                <br>
+                                                  <p>
+                                                    <b>Scenario 2:</b>
+                                                    <br>- Disabled person is the carer's partner
+                                                      <br>- They live at a different address
+                                                        <br>- Date of claim is today or in the future</p>
+                                                        <a href="aca-2046/scenario-2/dp-name" class="govuk-button govuk-button--start">Start now</a>
+                                                        <br>
+                                                          <p>
+                                                            <b>Scenario 3:</b>
+                                                            <br>- Disabled person is the carer's partner
+                                                              <br>- They live at a different address
+                                                                <br>- Date of claim is in the past</p>
+                                                                <a href="aca-2046/scenario-3/dp-name" class="govuk-button govuk-button--start">Start now</a>
+                                                                <br>
+                                                                  <p>
+                                                                    <b>Scenario 4:</b>
+                                                                    <br>- Disabled person is not the carer's partner
+                                                                      <br>- Carer has a partner</p>
+                                                                      <a href="aca-2046/scenario-4/dp-name" class="govuk-button govuk-button--start">Start now</a>
+                                                                      <br>
+                                                                        <p>
+                                                                          <b>Scenario 5:</b>
+                                                                          <br>- Disabled person is not the carer's partner
+                                                                            <br>- Carer has a ex-partner
+                                                                              <br>- Date of claim in in the past</p>
+                                                                              <a href="aca-2046/scenario-5/dp-name" class="govuk-button govuk-button--start">Start now</a>
+                                                                              <br>
+                                                                                <p>
+                                                                                  <b>Scenario 6:</b>
+                                                                                  <br>- Disabled person is not the carer's partner
+                                                                                    <br>- Carer does not have an ex-partner
+                                                                                      <br>- Date of claim in in the past</p>
+                                                                                      <a href="aca-2046/scenario-6/dp-name" class="govuk-button govuk-button--start">Start now</a>
+                                                                                      <br>
+                                                                                        <p>
+                                                                                          <b>Scenario 7:</b>
+                                                                                          <br>- Disabled person is not the carer's partner
+                                                                                            <br>- Carer does not have an ex-partner
+                                                                                              <br>- Date of claim is today or in the future</p>
+                                                                                              <a href="aca-2046/scenario-7/dp-name" class="govuk-button govuk-button--start">Start now</a>
+                                                                                              <br></div>
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                              <div class="app-most-recent">
+                                                                                                <strong class="govuk-tag govuk-tag--green">
+                                                                                                  tried and Tested
+                                                                                                </strong><br><br>
+                                                                                                <h2 class="govuk-heading-m">Date of claim</h2>
+                                                                                                {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                <div class="govuk-grid-row">
+                                                                                                  <div class="govuk-grid-column-one-third">
+                                                                                                    <dl>
+                                                                                                      <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                      <dd class="govuk-body" style="margin-left:0%">Jan 2022</dd>
+                                                                                                    </dl>
+                                                                                                  </div>
+                                                                                                  <div class="govuk-grid-column-one-third">
+                                                                                                    <dl>
+                                                                                                      <dt class="govuk-heading-s">Designers</dt>
+                                                                                                      <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                                                                                    </dl>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                                <h3 class="govuk-heading-s">UI changes</h3>
+                                                                                                <ul class="govuk-list govuk-list--bullet">
+                                                                                                  <li>Detering users from making the mistake of claiming more than 3 months in the future (anonymous feedback putting 2022
+                                                                                                    rather than 2021)
+                                                                                                  </li>
+                                                                                                </ul>
+                                                                                                <a href="/apply/ACA-2055/date-of-claim" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                <br></div>
+
+
+
+                                                                                                <div class="app-most-recent">
+                                                                                                  <strong class="govuk-tag govuk-tag--purple">
+                                                                                                    experimental
+                                                                                                    </strong><br><br>
+                                                                                                  <h2 class="govuk-heading-m">Changing date of claim from check your answers</h2>
+                                                                                                  {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                  <div class="govuk-grid-row">
+                                                                                                    <div class="govuk-grid-column-one-third">
+                                                                                                      <dl>
+                                                                                                        <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                        <dd class="govuk-body" style="margin-left:0%">Jan 2022</dd>
+                                                                                                      </dl>
+                                                                                                    </div>
+                                                                                                    <div class="govuk-grid-column-one-third">
+                                                                                                      <dl>
+                                                                                                        <dt class="govuk-heading-s">Designers</dt>
+                                                                                                        <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                                                                                      </dl>
+                                                                                                    </div>
+                                                                                                  </div>
+                                                                                                  <h3 class="govuk-heading-s">UI changes</h3>
+                                                                                                  <ul class="govuk-list govuk-list--bullet">
+                                                                                                    <li>Warning users all previously answered questions around previously entered date of claim will need to be asked again
+                                                                                                      if they change their date of claim from check your answers.
+                                                                                                    </li>
+                                                                                                  </ul>
+                                                                                                  <a href="/apply/ACA-2055/date-of-claim-change" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                  <br></div>
+
+
+                                                                                                  <div class="app-most-recent">
+                                                                                                    <strong class="govuk-tag govuk-tag--purple">
+                                                                                                    experimental
+                                                                                                    </strong><br><br>
+                                                                                                    <h2 class="govuk-heading-m">OIDV drop out content</h2>
+                                                                                                    {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                    <div class="govuk-grid-row">
+                                                                                                      <div class="govuk-grid-column-one-third">
+                                                                                                        <dl>
+                                                                                                          <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                          <dd class="govuk-body" style="margin-left:0%">December 2022</dd>
+                                                                                                        </dl>
+                                                                                                      </div>
+                                                                                                      <div class="govuk-grid-column-one-third">
+                                                                                                        <dl>
+                                                                                                          <dt class="govuk-heading-s">Designers</dt>
+                                                                                                          <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                                                                                        </dl>
+                                                                                                      </div>
+                                                                                                    </div>
+                                                                                                    <h3 class="govuk-heading-s">Design</h3>
+                                                                                                    <ul class="govuk-list govuk-list--bullet">
+                                                                                                      <li>Providing dynamic content for the OIDV drop out pages (mockups)
+                                                                                                      </ul>
+                                                                                                      <a href="aca-1974/identity-manual" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                      <br></div>
+                                                                                                      
+                                                                                                        <div class="app-most-recent">
+                                                                                                          <strong class="govuk-tag govuk-tag--green">
+                                                                                                   tried and tested
+                                                                                                    </strong><br><br>
+                                                                                                          <h2 class="govuk-heading-m">Payment details</h2>
+                                                                                                          {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                          <div class="govuk-grid-row">
+                                                                                                            <div class="govuk-grid-column-one-third">
+                                                                                                              <dl>
+                                                                                                                <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                                <dd class="govuk-body" style="margin-left:0%">August 2022</dd>
+                                                                                                              </dl>
+                                                                                                            </div>
+                                                                                                            <div class="govuk-grid-column-one-third">
+                                                                                                              <dl>
+                                                                                                                <dt class="govuk-heading-s">Designers</dt>
+                                                                                                                <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                                                                                              </dl>
+                                                                                                            </div>
+                                                                                                          </div>
+                                                                                                          <h3 class="govuk-heading-s">UI changes</h3>
+                                                                                                          <ul class="govuk-list govuk-list--bullet">
+                                                                                                            <li>Removing yes/no radio buttons asking if the citizen has back details
+                                                                                                            </li>
+                                                                                                            <li>Adding a new screen to encourage users to enter bank details
+                                                                                                            </li>
+                                                                                                          </ul>
+                                                                                                          <h3 class="govuk-heading-s">Related story</h3>
+                                                                                                          <ul class="govuk-list govuk-list--bullet">
+                                                                                                            <li>
+                                                                                                              <a href="https://dwpdigital.atlassian.net/browse/ACA-1472">ACA-1515</a>
+                                                                                                            </li>
+                                                                                                            <br></ul>
+                                                                                                            <a href="/apply/ACA-1515/bank-details" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                            <br></div>
+                                                                                                           
+                                                                                                            <div class="app-most-recent">
+                                                                                                              <strong class="govuk-tag govuk-tag--green">
+                                                                                                                  tried and tested
+                                                                                                                  </strong><br><br>
+                                                                                                              <h2 class="govuk-heading-m">Date of claim - iteration 1</h2>
+                                                                                                              {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                              <div class="govuk-grid-row">
+                                                                                                                <div class="govuk-grid-column-one-third">
+                                                                                                                  <dl>
+                                                                                                                    <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                                    <dd class="govuk-body" style="margin-left:0%">May 2022</dd>
+                                                                                                                  </dl>
+                                                                                                                </div>
+                                                                                                                <div class="govuk-grid-column-one-third">
+                                                                                                                  <dl>
+                                                                                                                    <dt class="govuk-heading-s">Designers</dt>
+                                                                                                                    <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                                                                                                  </dl>
+                                                                                                                </div>
+                                                                                                              </div>
+                                                                                                              {# <h3 class="govuk-heading-s">Business requirements</h3>
+                                                                                                              <ul class="govuk-list govuk-list--bullet">
+                                                                                                                <li>The current employment question “Have you been an employee since [claim date - 6-months]?” could be perceived by some as leading to people understanding this as being employed on that date and not at any point since that time. There is some anecdotal evidence to support this and that it is leading agents to have to do callbacks
+                                                                                                                </li>
+                                                                                                              </ul> #}
+                                                                                                              <h3 class="govuk-heading-s">UI changes</h3>
+                                                                                                              <ul class="govuk-list govuk-list--bullet">
+                                                                                                                <li>By asking what date the disabled person's qualifying benefit started we can display the earliest date the carer can
+                                                                                                                  claim from based on the policy rules.
+                                                                                                                </li>
+                                                                                                                <li>The carer then doesn't need to work out the earliest date they can claim from based on complex rules.
+                                                                                                                </ul>
+                                                                                                                <h3 class="govuk-heading-s">Related story</h3>
+                                                                                                                <ul class="govuk-list govuk-list--bullet">
+                                                                                                                  <li>
+                                                                                                                    <a href="https://dwpdigital.atlassian.net/browse/ACA-1472">ACA-1472</a>
+                                                                                                                    - Date of claim redesign
+                                                                                                                  </li>
+                                                                                                                  </ul>
+
+                                                                                                                    <h3 class="govuk-heading-s">Research findings</h3>
+                                                                                                              <ul class="govuk-list govuk-list--bullet">
+                                                                                                                <li>Users struggled to understand where calculated dates came from
+                                                                                                                </li>
+                                                                                                                </ul>
+                                                                                                              
+                                                                                                                  <p>
+                                                                                                                    <b>New design:<br>
+                                                                                                                        <a href="/apply/ACA-1472/index" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                        <br>
+                                                                                                                          
+                                                                                                                            <b>What's in live:<br>
+                                                                                                                                <a href="/apply/ACA-1472/live/start-page" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                <br></div>
+
+
+                                                                                                                                <div class="app-most-recent">
+                                                                                                                                    <strong class="govuk-tag govuk-tag--purple">
+                                                                                                                                        experimental
+                                                                                                                                        </strong><br><br>
+                                                                                                                                  <h2 class="govuk-heading-m">Employment redesign</h2>
+                                                                                                                                  {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                                                  <div class="govuk-grid-row">
+                                                                                                                                    <div class="govuk-grid-column-one-third">
+                                                                                                                                      <dl>
+                                                                                                                                        <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                                                        <dd class="govuk-body" style="margin-left:0%">March 2022</dd>
+                                                                                                                                      </dl>
+                                                                                                                                    </div>
+                                                                                                                                    <div class="govuk-grid-column-one-third">
+                                                                                                                                      <dl>
+                                                                                                                                        <dt class="govuk-heading-s">Designers</dt>
+                                                                                                                                        <dd class="govuk-body" style="margin-left:0%">Emily W, Steve K and Colin J</dd>
+                                                                                                                                      </dl>
+                                                                                                                                    </div>
+                                                                                                                                  </div>
+                                                                                                                                  <h3 class="govuk-heading-s">Business requirements</h3>
+                                                                                                                                  <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                    <li>The current employment question “Have you been an employee since [claim date - 6-months]?” could be perceived by
+                                                                                                                                      some as leading to people understanding this as being employed on that date and not at any point since that time. There
+                                                                                                                                      is some anecdotal evidence to support this and that it is leading agents to have to do callbacks
+                                                                                                                                    </li>
+                                                                                                                                    <li>Don't need to ask about private pensions</li>
+                                                                                                                                  </ul>
+                                                                                                                                  <h3 class="govuk-heading-s">UI changes</h3>
+                                                                                                                                  <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                    <li>content improvements
+                                                                                                                                    </li>
+                                                                                                                                    <li>ideal journey breaking the questions down to one per page to follow design principle
+                                                                                                                                    </li>
+                                                                                                                                  </ul>
+                                                                                                                                  <h3 class="govuk-heading-s">Related story</h3>
+                                                                                                                                  <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                    <li>
+                                                                                                                                      <a href="https://dwpdigital.atlassian.net/browse/ACA-1405">ACA-1405</a>
+                                                                                                                                      - Improve employment questions
+                                                                                                                                    </li>
+                                                                                                                                    <br></ul>
+                                                                                                                                    <a href="/apply/ACA-1405/index" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                    <br></div>
+
+
+                                                                                                                    
+
+
+                                                                                                                                        <div class="app-most-recent">
+                                                                                                                                           <strong class="govuk-tag govuk-tag--green">
+                                                                                                                                        tried and tested
+                                                                                                                                        </strong><br><br>
+                                                                                                                                          <h2 class="govuk-heading-m">Breaks in care - iteration 6</h2>
+                                                                                                                                          {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                                                          <div class="govuk-grid-row">
+                                                                                                                                            <div class="govuk-grid-column-one-third">
+                                                                                                                                              <dl>
+                                                                                                                                                <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                                                                <dd class="govuk-body" style="margin-left:0%">February 2022</dd>
+                                                                                                                                              </dl>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="govuk-grid-column-one-third">
+                                                                                                                                              <dl>
+                                                                                                                                                <dt class="govuk-heading-s">Designers</dt>
+                                                                                                                                                <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                                                                                                                              </dl>
+                                                                                                                                            </div>
+                                                                                                                                          </div>
+                                                                                                                                          <h3 class="govuk-heading-s">Business requirements</h3>
+                                                                                                                                          <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                            <li>If citizen provides dates of a break in care that run over a part week, we need to know whether or not they cared
+                                                                                                                                              for 35 hours in that week
+                                                                                                                                            </li>
+                                                                                                                                          </ul>
+                                                                                                                                          <h3 class="govuk-heading-s">Research scenario</h3>
+                                                                                                                                          <p>User is making a claim for CA. They started providing care for John Smith on 12 November 2021, and they’re claiming
+                                                                                                                                            CA from 5 January 2022.
+                                                                                                                                            <p>John went into hospital on 11 January 2022 and came out on 26 January 2022. The user identifies this as being a break
+                                                                                                                                              in care and needs to tell us. The care weeks in which she did not provide 35 hours of care are 16 to 22 January and 23
+                                                                                                                                              to 29 January. She provided care for 35 hours in the care week where John went into hospital (9 to 15 January).</p>
+                                                                                                                                            <h3 class="govuk-heading-s">Related story</h3>
+                                                                                                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                              <li>
+                                                                                                                                                <a href="https://dwpdigital.atlassian.net/browse/ACA-1386">ACA-1386</a>
+                                                                                                                                                - Breaks in care - iteration 2 - citizen can confirm part weeks as a break
+                                                                                                                                              </li>
+                                                                                                                                              <br></ul>
+                                                                                                                                              <p>
+                                                                                                                                                <b>Design 1</b>
+                                                                                                                                                <p>The user is presented with both of the part-care weeks on one page and asked to tell us which ones they did not
+                                                                                                                                                  provide 35 hours of care, if any.
+                                                                                                                                                  <br>
+                                                                                                                                                    <br>
+                                                                                                                                                      <a href="/apply/ACA-1386-1/start-page" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                                      <br>
+                                                                                                                                                        <b>Design 2</b>
+                                                                                                                                                        <br>
+                                                                                                                                                          <p>The user is asked about each part-care week as separate questions.
+                                                                                                                                                            <br>
+                                                                                                                                                              <br>
+                                                                                                                                                                <a href="/apply/ACA-1386-2/start-page" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                                                <br></div>
+
+
+                                                                                                                                                                <div class="app-most-recent">
+                                                                                                                                                                  <strong class="govuk-tag govuk-tag--green">
+                                                                                                                                                                      tried and tested
+                                                                                                                                                                      </strong><br><br>
+                                                                                                                                                                  <h2 class="govuk-heading-m">PRO517 automation improvements - iteration 3</h2>
+                                                                                                                                                                  {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                                                                                  <div class="govuk-grid-row">
+                                                                                                                                                                    <div class="govuk-grid-column-one-third">
+                                                                                                                                                                      <dl>
+                                                                                                                                                                        <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                                                                                        <dd class="govuk-body" style="margin-left:0%">January 2022</dd>
+                                                                                                                                                                      </dl>
+                                                                                                                                                                    </div>
+                                                                                                                                                                    <div class="govuk-grid-column-one-third">
+                                                                                                                                                                      <dl>
+                                                                                                                                                                        <dt class="govuk-heading-s">Designers</dt>
+                                                                                                                                                                        <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                                                                                                                                                      </dl>
+                                                                                                                                                                    </div>
+                                                                                                                                                                  </div>
+                                                                                                                                                                  <h3 class="govuk-heading-s">Business requirements</h3>
+                                                                                                                                                                  <p>
+                                                                                                                                                                    As with iteration 1 and 2, we want to explore further design changes that could improve the user journey and help
+                                                                                                                                                                    encourage claimants to enter the NINO of the person they provide care for.
+                                                                                                                                                                  </p>
+                                                                                                                                                                  <h3 class="govuk-heading-s">UI Improvements</h3>
+                                                                                                                                                                  <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                    <li>Dynamic H1 and paragraph content depending on whether or not the person they provide care for is over 16, based on
+                                                                                                                                                                      the DOB they enter on the previous page.</li>
+                                                                                                                                                                  </ul>
+                                                                                                                                                                  <h3 class="govuk-heading-s">Related story</h3>
+                                                                                                                                                                  <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                    <li>
+                                                                                                                                                                      <a href="https://dwpdigital.atlassian.net/browse/ACA-1375">ACA-1375</a>
+                                                                                                                                                                      - Further design solutions to increase PRO517 automation
+                                                                                                                                                                    </li>
+                                                                                                                                                                    <br></ul>
+                                                                                                                                                                    <p>
+                                                                                                                                                                      <b>Over 16:<br>
+                                                                                                                                                                          <a href="/apply/ACA-1375-2/dp-details2" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                                                          <br>
+                                                                                                                                                                            Under 16:<br>
+                                                                                                                                                                              <a href="/apply/ACA-1375-2/dp-details1" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                                                              <br></div>
+
+                                                                                                                                                                              <div class="app-most-recent">
+                                                                                                                                                                                <strong class="govuk-tag govuk-tag--green">
+                                                                                                                                                                                  tried and tested
+                                                                                                                                                                                  </strong><br><br>
+                                                                                                                                                                                <h2 class="govuk-heading-m">PRO517 automation improvements - iteration 2</h2>
+                                                                                                                                                                                {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                                                                                                <div class="govuk-grid-row">
+                                                                                                                                                                                  <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                    <dl>
+                                                                                                                                                                                      <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                                                                                                      <dd class="govuk-body" style="margin-left:0%">January 2022</dd>
+                                                                                                                                                                                    </dl>
+                                                                                                                                                                                  </div>
+                                                                                                                                                                                  <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                    <dl>
+                                                                                                                                                                                      <dt class="govuk-heading-s">Designers</dt>
+                                                                                                                                                                                      <dd class="govuk-body" style="margin-left:0%">EEmily W and Colin J</dd>
+                                                                                                                                                                                    </dl>
+                                                                                                                                                                                  </div>
+                                                                                                                                                                                </div>
+                                                                                                                                                                                <h3 class="govuk-heading-s">Business requirements</h3>
+                                                                                                                                                                                <p>
+                                                                                                                                                                                  As with iteration 1, we want to explore further design changes that could encourage claimants to enter the NINO of the
+                                                                                                                                                                                  person they provide care for.
+                                                                                                                                                                                </p>
+                                                                                                                                                                                <h3 class="govuk-heading-s">Related story</h3>
+                                                                                                                                                                                <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                  <li>
+                                                                                                                                                                                    <a href="https://dwpdigital.atlassian.net/browse/ACA-1375">ACA-1375</a>
+                                                                                                                                                                                    - Further design solutions to increase PRO517 automation
+                                                                                                                                                                                  </li>
+                                                                                                                                                                                  <br></ul>
+                                                                                                                                                                                  <a href="/apply/ACA-1375/eligible" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                                                                  <br></div>
+                                                                                                                                                                                  <div class="app-most-recent">
+                                                                                                                                                                                    <strong class="govuk-tag govuk-tag--green">
+                                                                                                                                                                                      tried and tested
+                                                                                                                                                                                      </strong><br><br>
+                                                                                                                                                                                    <h2 class="govuk-heading-m">PRO517 automation improvements - iteration 1</h2>
+                                                                                                                                                                                    {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                                                                                                    <div class="govuk-grid-row">
+                                                                                                                                                                                      <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                        <dl>
+                                                                                                                                                                                          <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                                                                                                          <dd class="govuk-body" style="margin-left:0%">December 2021</dd>
+                                                                                                                                                                                        </dl>
+                                                                                                                                                                                      </div>
+                                                                                                                                                                                      <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                        <dl>
+                                                                                                                                                                                          <dt class="govuk-heading-s">Designers</dt>
+                                                                                                                                                                                          <dd class="govuk-body" style="margin-left:0%">Colin J</dd>
+                                                                                                                                                                                        </dl>
+                                                                                                                                                                                      </div>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    <h3 class="govuk-heading-s">Business requirements</h3>
+                                                                                                                                                                                    <p>
+                                                                                                                                                                                      In order to improve the current PRO517 automation rate (66%), we need to increase the number of claims that come in with
+                                                                                                                                                                                      the DP's NINO. Currently, around 60% of cases where the PRO517 failed to sent automatically were because there was no DP
+                                                                                                                                                                                      NINO.
+                                                                                                                                                                                    </p>
+                                                                                                                                                                                    <P>
+                                                                                                                                                                                      Looking at ways to change the way we capture the DP NINO, encouraging users to enter it where they can.
+                                                                                                                                                                                    </P>
+                                                                                                                                                                                    <p>
+                                                                                                                                                                                      We are unable to make this field mandatory.
+                                                                                                                                                                                    </p>
+                                                                                                                                                                                    <h3 class="govuk-heading-s">Related story</h3>
+                                                                                                                                                                                    <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                      <li>
+                                                                                                                                                                                        <a href="https://dwpdigital.atlassian.net/browse/ACA-1311">ACA-1311</a>
+                                                                                                                                                                                        - Improvement of automation of PRO517 letters
+                                                                                                                                                                                      </li>
+                                                                                                                                                                                      <br></ul>
+                                                                                                                                                                                      <a href="/apply/ACA-1311/eligible" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                                                                      <br></div>
+                                                                                                                                                                                      <div class="app-most-recent">
+                                                                                                                                                                                        <strong class="govuk-tag govuk-tag--green">
+                                                                                                                                                                                            tried and tested
+                                                                                                                                                                                            </strong><br><br>
+                                                                                                                                                                                        <h2 class="govuk-heading-m">Breaks in care - iteration 5</h2>
+                                                                                                                                                                              
+                                                                                                                                                                                        {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                                                                                                        <div class="govuk-grid-row">
+                                                                                                                                                                                          <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                            <dl>
+                                                                                                                                                                                              <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                                                                                                              <dd class="govuk-body" style="margin-left:0%">January 2022</dd>
+                                                                                                                                                                                            </dl>
+                                                                                                                                                                                          </div>
+                                                                                                                                                                                          <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                            <dl>
+                                                                                                                                                                                              <dt class="govuk-heading-s">Designers</dt>
+                                                                                                                                                                                              <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                                                                                                                                                                            </dl>
+                                                                                                                                                                                          </div>
+                                                                                                                                                                                        </div>
+                                                                                                                                                                                        <h3 class="govuk-heading-s">Business requirements</h3>
+                                                                                                                                                                                        <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                          <li>Need to know who was where</li>
+                                                                                                                                                                                          <li>Need to cater for if both carer and caree were receving medical care in the same break (edge case but could happen)</li>
+                                                                                                                                                                                        </ul>
+                                                                                                                                                                                        <h3 class="govuk-heading-s">Related story</h3>
+                                                                                                                                                                                        <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                          <li>
+                                                                                                                                                                                            <a href="https://dwpdigital.atlassian.net/browse/ACA-1366">ACA-1366</a>
+                                                                                                                                                                                            - Find out who received medical care
+                                                                                                                                                                                          </li>
+                                                                                                                                                                                          <br></ul>
+                                                                                                                                                                                          <a href="/apply/ACA-1289-3/start-page" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                                                                          <br></div>
+                                                                                                                                                                                          <div class="app-most-recent">
+                                                                                                                                                                                            <strong class="govuk-tag govuk-tag--green">tried and tested</strong><br><br>
+                                                                                                                                                                                            <h2 class="govuk-heading-m">Breaks in care - iteration 4</h2>
+                                                                                                                                                                                               
+                                                                                                                                                                                            {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                                                                                                            <div class="govuk-grid-row">
+                                                                                                                                                                                              <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                                <dl>
+                                                                                                                                                                                                  <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                                                                                                                  <dd class="govuk-body" style="margin-left:0%">December 2021</dd>
+                                                                                                                                                                                                </dl>
+                                                                                                                                                                                              </div>
+                                                                                                                                                                                              <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                                <dl>
+                                                                                                                                                                                                  <dt class="govuk-heading-s">Designers</dt>
+                                                                                                                                                                                                  <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                                                                                                                                                                                </dl>
+                                                                                                                                                                                              </div>
+                                                                                                                                                                                            </div>
+                                                                                                                                                                                            <h3 class="govuk-heading-s">Business requirements</h3>
+                                                                                                                                                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                              <li>Add question about hospital stays</li>
+                                                                                                                                                                                            </ul>
+                                                                                                                                                                                            <h3 class="govuk-heading-s">UI Improvements</h3>
+                                                                                                                                                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                              <li>Updated entering dates design to be more accessible</li>
+                                                                                                                                                                                            </ul>
+                                                                                                                                                                                            <h3 class="govuk-heading-s">Related story</h3>
+                                                                                                                                                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                              <li>
+                                                                                                                                                                                                <a href="https://dwpdigital.atlassian.net/browse/ACA-1289">ACA-1289</a>
+                                                                                                                                                                                                - BIC UI improvements
+                                                                                                                                                                                              </li>
+                                                                                                                                                                                              <br></ul>
+                                                                                                                                                                                              <p>
+                                                                                                                                                                                                <b>Hospital question in radio reveal:</p>
+                                                                                                                                                                                                <a href="/apply/ACA-1289-2/start-page" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                                                                                <br>
+                                                                                                                                                                                                  <p>
+                                                                                                                                                                                                    <b>Version splitting hospital question onto two pages and including hospital on summary page:</p>
+                                                                                                                                                                                                    <a href="/apply/ACA-1289/start-page" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                                                                                    <br></div>
+                                                                                                                                                                                                    <div class="app-most-recent">
+                                                                                                                                                                                                      <strong class="govuk-tag govuk-tag--green">tried and tested</strong><br><br>
+                                                                                                                                                                                                      <h2 class="govuk-heading-m">Breaks in care - iteration 3</h2>
+                                                                                                                                                                                                      
+                                                                                                                                                                                                      {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                                                                                                                      <div class="govuk-grid-row">
+                                                                                                                                                                                                        <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                                          <dl>
+                                                                                                                                                                                                            <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                                                                                                                            <dd class="govuk-body" style="margin-left:0%">September 2021</dd>
+                                                                                                                                                                                                          </dl>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                        <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                                          <dl>
+                                                                                                                                                                                                            <dt class="govuk-heading-s">Designers</dt>
+                                                                                                                                                                                                            <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                                                                                                                                                                                          </dl>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                      <h3 class="govuk-heading-s">Business requirement</h3>
+                                                                                                                                                                                                      <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                                        <li>Journey includes, ID&T data capture and date of claim</li>
+                                                                                                                                                                                                        <li>Only asking for the dates of breaks in care if after date of claim</li>
+                                                                                                                                                                                                        <li>Scenario: 20 September 2021 date of claim, 1 August 2021 date started caring
+                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                        <h3 class="govuk-heading-s">Related story</h3>
+                                                                                                                                                                                                        <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                                          <li>
+                                                                                                                                                                                                            <a href="https://dwpdigital.atlassian.net/browse/ACA-1285">ACA-1285</a>
+                                                                                                                                                                                                            - BIC UI improvements
+                                                                                                                                                                                                          </li>
+                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                        <a href="/apply/ACA-1285/ACA-1285-2/start-page" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                                                                                        <br></div>
+
+                                                                                                                                                                                                        <div class="app-most-recent">
+                                                                                                                                                                                                          <strong class="govuk-tag govuk-tag--green">tried and tested</strong><br><br>
+                                                                                                                                                                                                          <h2 class="govuk-heading-m">Breaks in care - iteration 2</h2>
+                                                                                                                                                                                                          {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+                                                                                                                                                                                                          <div class="govuk-grid-row">
+                                                                                                                                                                                                            <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                                              <dl>
+                                                                                                                                                                                                                <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                                                                                                                                <dd class="govuk-body" style="margin-left:0%">August 2021</dd>
+                                                                                                                                                                                                              </dl>
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                            <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                                              <dl>
+                                                                                                                                                                                                                <dt class="govuk-heading-s">Designers</dt>
+                                                                                                                                                                                                                <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                                                                                                                                                                                              </dl>
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                          <h3 class="govuk-heading-s">Business requirement</h3>
+                                                                                                                                                                                                          <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                                            <li>Updated to GDS style one thing per page for removing a break in care from check your answers</li>
+                                                                                                                                                                                                          </ul>
+                                                                                                                                                                                                          <h3 class="govuk-heading-s">Related story</h3>
+                                                                                                                                                                                                          <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                                            <li>
+                                                                                                                                                                                                              <a href="https://dwpdigital.atlassian.net/browse/ACA-1088">ACA-1088</a>
+                                                                                                                                                                                                              - Add new page for removing a break in care entry from the summary page
+                                                                                                                                                                                                            </li>
+                                                                                                                                                                                                          </ul>
+                                                                                                                                                                                                          <a href="/apply/ACA-1038/ACA-1088/first" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                                                                                          <br></div>
+                                                                                                                                                                                                          <div class="app-most-recent">
+                                                                                                                                                                                                            <strong class="govuk-tag govuk-tag--green">tried and tested</strong><br><br>
+                                                                                                                                                                                                            <h2 class="govuk-heading-m">Breaks in care - iteration 1</h2>
+                                                                                                                                                                                                            <div class="govuk-grid-row">
+                                                                                                                                                                                                              <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                                                <dl>
+                                                                                                                                                                                                                  <dt class="govuk-heading-s">Date of design</dt>
+                                                                                                                                                                                                                  <dd class="govuk-body" style="margin-left:0%">July 2021</dd>
+                                                                                                                                                                                                                </dl>
+                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                              <div class="govuk-grid-column-one-third">
+                                                                                                                                                                                                                <dl>
+                                                                                                                                                                                                                  <dt class="govuk-heading-s">Designers</dt>
+                                                                                                                                                                                                                  <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+                                                                                                                                                                                                                </dl>
+                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                            <h3 class="govuk-heading-s">Business requirement</h3>
+                                                                                                                                                                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                                              <li>Must capture all hospital, care home and respite care stays</li>
+                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                            <h3 class="govuk-heading-s">Related story</h3>
+                                                                                                                                                                                                            <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                                                                                              <li>
+                                                                                                                                                                                                                <a href="https://dwpdigital.atlassian.net/browse/ACA-1038">ACA-1038</a>
+                                                                                                                                                                                                                - Improve BIC journey
+                                                                                                                                                                                                              </li>
+                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                            <a href="/apply/ACA-1038/ACA-1088-new/first" class="govuk-button govuk-button--start">Start now</a>
+                                                                                                                                                                                                            <br></div>
+                                                                                                                                                                                                            <h2 class="govuk-heading-m">
+                                                                                                                                                                                                              <a href="/apply/index-older" class="govuk-link--no-visited-state">
+                                                                                                                                                                                                                Older prototypes
+                                                                                                                                                                                                              </a>
+                                                                                                                                                                                                              <h2></div>
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                        {% endblock %}

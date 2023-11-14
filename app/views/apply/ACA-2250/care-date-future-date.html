@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Based on your answers, you are not eligible for Carer's Allowance - Apply for Carer’s Allowance
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+        <h1 class="govuk-heading-l">
+          Based on this answer, you are not eligible for Carer’s Allowance
+        </h1>
+
+        <p class="govuk-body">
+              You entered the date you started providing care as <b>15 October 2023</b>. 
+              <br><br>
+              You must be providing care for at least 35 hours a week 
+                before you claim Carer’s Allowance, and you cannot make a 
+                claim for more than 3 months in the future. 
+                
+                <br><br>This means you 
+                will not get Carer’s Allowance based on the date you started providing care.</p>
+
+                  {{ govukRadios({
+              name: "change-care-start-date",
+              fieldset: {
+                legend: {
+                  text: "Do you want to change the date you started providing care?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--s"
+                }
+              },
+              items: [
+                {
+                  value: "yes",
+                  text: "Yes"
+                },
+                {
+                  value: "no",
+                  text: "No, I want to use this date"
+                }
+              ]
+            }) }}
+
+          {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

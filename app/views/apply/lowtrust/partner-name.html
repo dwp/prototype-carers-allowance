@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="partner-dob">
+
+               <h1 class="govuk-heading-l">What is your partner's name?</h1>
+
+
+               
+
+                    {{ govukInput({
+                    name: 'partner-first-name',
+                    value: data['dp-first-name'],
+                    label: {
+                        text: "First name",
+                        isPageHeading: true
+                    }
+                    }) }}
+
+                     {# {{ govukInput({
+                    label: {
+                     name: 'partner-middle-name',
+                    value: data['partner-middle-name'],
+                        text: "Middle names",
+                        isPageHeading: true
+                    }
+                    }) }} #}
+                     {{ govukInput({
+                     name: 'partner-last-name',
+                    value: data['dp-last-name'],
+                    label: {
+                        text: "Last name",
+                        isPageHeading: true
+                    }
+                    }) }}
+
+                     {{ govukInput({
+                     name: 'previous-partner-last-name',
+                    value: data['dprevious-partner-last-name'],
+                    label: {
+                        text: "Previous last name or maiden name",
+                        isPageHeading: true
+                    }
+                    }) }}
+
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form method="post" action="qb-3months">
+
+            {% set dateHtml %}
+
+                    {{ govukDateInput({
+                    id: "qb-start-date",
+                    namePrefix: "qb-start-date",
+                    fieldset: {
+                        legend: {
+                        text:'When did ' + data['dp-first-name'] +' '+ data['dp-last-name'] + '\'s Attendance Allowance start?',
+                        isPageHeading: true,
+                        classes: "govuk-fieldset__legend--m"
+                        }
+                    },
+                    hint: {
+                        text: "For example, 27 3 2021"
+                    }
+                    }) }}
+
+            {% endset -%}
+
+            {{ govukRadios({
+  idPrefix: "qb-start",
+  name: "cqb-start",
+  fieldset: {
+    legend: {
+      text:'Do you know when ' + data['dp-first-name'] +' '+ data['dp-last-name'] + '\'s Attendance Allowance started?',
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "This is the date which the Attendance Allowance was paid from, including if it was backdated. You can find this information on the Attendance Allowance award letter."
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes",
+      conditional: {
+        html: dateHtml
+      }
+    },
+     {
+      value: "no",
+      text: "No"
+    }
+
+  ]
+}) }}
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Do you want a confirmation email when you send your application?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="care-you-provide-their-personal-details">
+
+        <h1 class="govuk-heading-l">What is your email address?</h1>
+
+        <p>We will only use this to send you a confirmation email. If we need more information about your application, we will contact you by phone or post.</p>
+
+
+        {{ govukInput ({
+          id: 'emailAddress',
+          name: 'emailAddress',
+          value: data.emailAddress,
+          classes: 'govuk-input--width-full',
+          type: 'email',
+          label: {
+            text: 'Email address (optional)',
+            classes: 'govuk-input--width-full app-bold-label'
+          }
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

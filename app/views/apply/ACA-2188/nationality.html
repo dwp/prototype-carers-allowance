@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  About your nationality and where you live
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="nationality-always-lived-esw">
+
+        {% set nationalityHTML %}
+          {{ govukInput ({
+            id: 'actualNationality',
+            name: 'actualNationality',
+            value: data.actualNationality,
+            classes: 'govuk-input--width-20',
+            label: {
+              text: 'Your nationality',
+              classes: 'govuk-input--width-20 app-bold-label'
+            }
+          }) }}
+        {% endset %}
+
+       
+
+        {{ govukRadios ({
+          idPrefix: 'nationality',
+          name: 'nationality',
+          fieldset: {
+            legend: {
+              text: 'What is your nationality?',
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--l'
+            }
+          },
+          items: [
+            {
+              text: 'British',
+              value: 'British',
+              checked: true if data.nationality === 'British'
+            },
+            {
+              text: 'Another nationality',
+              value: 'Another nationality',
+              conditional: {
+              html: nationalityHTML
+            },
+              checked: true if data.nationality === 'Another nationality'
+            }
+          ]
+        }) }}
+
+      
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

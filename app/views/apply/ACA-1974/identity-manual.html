@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% set carerName = 'Alice Walsh' %}
+{% set dpName = 'Emily Marsden' %}
+{% set claimDate = '1 February 2021' %}
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+{% block beforeContent %} 
+    {{ super() }}
+ 
+ {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form method="post" action="start-page">
+                <h1 class="govuk-heading-l">Continue applying for Carer’s Allowance
+                </h1>
+                
+       <p>We will not be able to verify your identity online, but you can still continue your Carer’s Allowance application.
+           <br><br>
+        This will not impact your claim, as we can verify your identity manually after you complete and send your application.</p>
+
+                {{ govukButton({
+                text: "Continue",
+                href: "start-page"
+                }) }}
+
+               
+
+            </form>
+        </div>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="partner-lived">
+
+   
+                <p class="govuk-fieldset__legend--l">
+                    End of prototype
+                </p>
+              
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  What benefit does the person you provide care for get?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="mobile-filter">
+
+
+{{ govukRadios({
+  name: "where-do-you-live",
+  fieldset: {
+    legend: {
+      text: "Why do you need to end your claim?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "end~/changes/ACA-2447-3/death",
+      text: "The person I care for has died"
+     
+    },
+    {
+      value: "end-2",
+      text: "I have permanently stopped providing care for 35 hours a week or more"
+     
+    },
+    {
+      value: "end-3",
+      text: "Someone else who cares for the same person is claiming the allowance instead"
+
+    },
+    {
+      value: "end-3",
+      text: "I do not want to claim anymore"
+    }
+  ]
+}) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}

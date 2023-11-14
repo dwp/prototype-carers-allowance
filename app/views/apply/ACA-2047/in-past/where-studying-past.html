@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="course-name-past">
+        {{ govukInput({
+          name: 'WhereStudyingPast',
+          value: data.WhereStudyingPast,
+          label: {
+            text: "Where were you studying?",
+            isPageHeading: true,
+            classes: "govuk-label--l"
+          },
+          hint: {
+            text: 'For example, the name of the university, college, school or other organisation that provides your course of education.'
+          }
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

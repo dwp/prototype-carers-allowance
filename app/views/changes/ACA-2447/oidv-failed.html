@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  What is your telephone number?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="name">
+
+        <h1 class="govuk-heading-l">Unable to verify your details</h1>
+
+
+        <p>If you cannot verify your details online, you can still submit a change request, asking us to end your Carer’s Allowance claim. This will be looked at by an agent and should be processed within X weeks, but it may take longer.</p>
+  
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}

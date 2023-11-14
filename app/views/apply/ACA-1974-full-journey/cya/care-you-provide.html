@@ -1,0 +1,11 @@
+{% from "govuk/components/summary-list/macro.njk" import "govukSummaryList" with context %}
+
+{% block careYouProvide %}
+  <h2 class="govuk-heading-m">About the person you provide care for</h2>
+
+  {{ govukSummaryList({
+    classes: "govuk-!-margin-bottom-9",
+    rows: sections.careYouProvide.rows
+  }) }}
+
+{% endblock %}

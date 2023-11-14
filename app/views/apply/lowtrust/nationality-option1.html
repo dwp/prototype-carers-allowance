@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="nationality-52weeks">
+
+{% set natHtml %}
+{{ govukInput({
+  id: "nationality",
+  name: "nationality",
+  type: "nationality",
+  spellcheck: true,
+  classes: "govuk-!-width-two-thirds",
+  label: {
+    text: "Nationality"
+  }
+}) }}
+{% endset -%}
+
+
+                {{ govukRadios({
+                    idPrefix: 'nationality1',
+                    name: 'nationality1',
+                    fieldset: {
+                        legend: {
+                            text: 'What is your nationality?',
+                            isPageHeading: true,
+                            classes: 'govuk-fieldset__legend--l'
+                        }
+                    },
+                    
+                    items: [
+                        {
+                            text: 'British',
+                            value: 'british~/apply/lowtrust/nationality-52weeks'
+                        },
+                        {
+                            text: 'Another nationality',
+                            value: 'another~/apply/lowtrust/nationality-arrive',
+                              conditional: {
+                              html: natHtml
+                                }
+                           
+                        }
+                     
+                    ]
+                }) }}
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

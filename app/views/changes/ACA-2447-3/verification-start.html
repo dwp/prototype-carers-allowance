@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  What is your telephone number?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+ <form>
+  <h1 class="govuk-heading-l">Verify your details</h1>
+  <p class="govuk-body">
+    You will now go through a verification process so that we can check you are the person that can end this claim. 
+  </p>
+  <p class="govuk-body">
+    You will first need to register using your email address and mobile phone number. Once registered, you will then need to answer some questions to verify your details.
+  </p>
+  <button type="reset" onclick="location.href='https://dwp-kbv-uplift.herokuapp.com/current/register/start?service-name=change-of-circumstances'" class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+</form>
+
+    </div>
+
+  </div>
+
+{% endblock %}

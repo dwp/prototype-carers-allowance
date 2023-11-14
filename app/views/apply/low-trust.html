@@ -1,0 +1,148 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Prototypes: Apply for Carer's Allowance
+{% endblock %}
+
+{% block header %}
+
+
+    {{ super() }}
+
+
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back to prototype home',
+    href: '/'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+   <div class="govuk-width-container">
+
+    
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-4">End to end prototypes</h1>
+
+<br><br>
+
+ <div class="app-most-recent">
+           <strong class="govuk-tag govuk-tag--yellow">
+             in progress
+            </strong>
+            <br><br>
+            <h2 class="govuk-heading-m">Ongoing improvements for 'ideal' end to end for no trust journey (no oidv)</h2>
+      {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <dl>
+              <dt class="govuk-heading-s">Date of design</dt>
+              <dd class="govuk-body" style="margin-left:0%">March 2023</dd>
+            </dl>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <dl>
+              <dt class="govuk-heading-s">Designers</dt>
+              <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+            </dl>
+          </div>
+        </div>
+        <h3 class="govuk-heading-s">Design</h3>
+        <ul class="govuk-list govuk-list--bullet">
+        <li>One thing per page design principle
+            <li>Using requirements we have now 
+                
+                  
+          </ul>
+          <h3 class="govuk-heading-s">Related story</h3>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>ACA-
+            </li>
+          </ul>
+      <a href="aca-2188/index" class="govuk-button govuk-button--start">Start now</a><br>
+            
+   </div>
+
+
+  <div class="app-most-recent">
+           <strong class="govuk-tag govuk-tag--green">
+             tried and tested
+            </strong>
+            <br><br>
+            <h2 class="govuk-heading-m">Testing OIDV with New Journey (ACA-1974)</h2>
+      {# <strong class="govuk-tag govuk-tag--red">Experimental</strong> #}
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <dl>
+              <dt class="govuk-heading-s">Date of design</dt>
+              <dd class="govuk-body" style="margin-left:0%">November 2022</dd>
+            </dl>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <dl>
+              <dt class="govuk-heading-s">Designers</dt>
+              <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+            </dl>
+          </div>
+        </div>
+        <h3 class="govuk-heading-s">Design</h3>
+        <ul class="govuk-list govuk-list--bullet">
+        <li>For the purpose of testing, does include some current screen designs of live service
+            <li>Inlcudes oIDV
+              <li>Includes new eligibility drop out pages
+                <li>Includes new date of claim design
+                  
+          </ul>
+          <h3 class="govuk-heading-s">Related story</h3>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>ACA-1974
+            </li>
+          </ul>
+      <a href="ACA-1974-full-journey/index" class="govuk-button govuk-button--start">Start now</a><br>
+            
+   </div>
+
+  <div class="app-most-recent">
+          <strong class="govuk-tag govuk-tag--purple">Experimental</strong>
+<br><br>
+            <h2 class="govuk-heading-m">Ongoing improvements for 'ideal' end to end</h2>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <dl>
+              <dt class="govuk-heading-s">Date of design</dt>
+              <dd class="govuk-body" style="margin-left:0%">April 2022</dd>
+            </dl>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <dl>
+              <dt class="govuk-heading-s">Designers</dt>
+              <dd class="govuk-body" style="margin-left:0%">Emily W and Colin J</dd>
+            </dl>
+          </div>
+        </div>
+        <h3 class="govuk-heading-s">Improvements</h3>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>One thing per page design principle</li>
+            <li>We need to integrate with ID&V and residency ‘green zone’ service UI</li>
+            <li>For MVP, we will not be including breaks in care, as we’re only accepting claims dated on the date the user applies (no back-dating or future-dating)</li>
+            <li>For MVP we will only accept claims from the carer – no third party applications</li>
+          </ul>
+          {# <h3 class="govuk-heading-s">Related story</h3>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+            </li>
+          </ul> #}
+      <a href="lowtrust/index" class="govuk-button govuk-button--start">Start now</a><br>
+          </div>   
+   </div>
+
+
+  </div>
+
+{% endblock %}

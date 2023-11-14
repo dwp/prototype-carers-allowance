@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+  Carer's Allowance prototype
+{% endblock %}
+{% block beforeContent %}
+  {{ super() }}
+
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="change-selection">
+        <h1 class="govuk-heading-xl">Carer's Allowance: report changes
+        </h1>
+
+       
+        <p>You must report changes in circumstances if you’re claiming or have applied for Carer’s Allowance, for example if:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>you change, start or leave your job</li>
+          <li>you start earning more than £132 a week</li>
+          <li>you stop being a carer</li>
+          <li>you stop providing at least 35 hours of care a week</li>
+          <li>you take a holiday or go into hospital - even if you arrange care while you’re away</li>
+          <li>the person you care for goes into hospital or takes a holiday
+          </li>
+        </ul>
+
+        <p>You cannot use this service to report the death of someone you’re caring for. You should use the <a href="https://www.gov.uk/after-a-death/organisations-you-need-to-contact-and-tell-us-once">Tell Us Once</a> service instead.</p>
+
+          <div class="govuk-inset-text">
+            This guide is also available <a href="">in Welsh (Cymraeg)</a>.
+          </div>
+
+        <h1 class="govuk-heading-m">Report changes online</h1>
+
+        <p>Make sure you have:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>your National Insurance number</li>
+          <li>details of the person you’re caring for</li>
+          <li>details of your changes</li>
+          
+        </ul>
+
+<br>
+        {{ govukButton({
+          text: "Start now",
+          isStartButton: true
+        }) }}
+
+        <h1 class="govuk-heading-m">Before you start</h1>
+        <p>This will take around 10 minutes</p>
+
+        <h1 class="govuk-heading-m">Other ways to apply</h1>
+        <p>You can also report a change of circumstances to the <a href="https://www.gov.uk/carers-allowance-unit">Carer’s Allowance Unit
+            </a> by phone or by post.</p>
+      
+
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

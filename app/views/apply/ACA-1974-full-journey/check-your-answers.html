@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Check your answers – Apply for Carer’s Allowance – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <form action="declaration">
+        <h1 class="govuk-heading-xl">Check your answers</h1>
+
+        {% include './cya/about-you.html' %}
+        {% include './cya/nationality.html' %}
+        {% include './cya/your-partner.html' %}
+        {% include './cya/care-you-provide.html' %}
+        {% include './cya/breaks-in-care.html' %}
+        {% include './cya/education.html' %}
+        {% include './cya/pay-details.html' %}
+        {% include './cya/additional-information.html' %}
+
+        {{ govukButton({
+          html: 'Print summary',
+          classes: 'govuk-button--secondary'
+        }) }}
+
+        {{ govukInsetText ({
+          text: 'Printing the summary does not send your application. You must click continue and send it from the next page.'
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

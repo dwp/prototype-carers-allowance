@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+    End of prototype
+{% endblock %}
+
+{% block beforeContent %}
+
+    {{ super() }}
+
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="/apply/ACA-2165/letter-1">
+
+                <h1 class="govuk-heading-xl">End of prototype</h1>
+
+
+                {{ govukButton({
+                    html: 'Next part of session'
+                }) }}
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

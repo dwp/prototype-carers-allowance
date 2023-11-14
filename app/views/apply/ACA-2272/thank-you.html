@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Declaration
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink ({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="end-1">
+        {{ govukPanel({
+          titleText: 'Your claim has been sent',
+          html: 'Your reference is your National Insurance number'
+        }) }}
+
+       <h2 class="govuk-heading-m">What happens next</h2>
+      <p>You will usually get a decision about your Carer’s Allowance claim within 6 weeks, but this may take longer.</p>
+      <p>The decision may be made automatically by a computer, using the information you have provided.</p>
+      <p>If we need any documents, we will contact you by phone or letter. You do not need to contact DWP.</p>
+      <p><a href="https://www.gov.uk/done/apply-carers-allowance">What did you think of this service?</a> (takes 30 seconds)</p>
+
+<br><br>
+                {{ govukButton({
+                    html: 'Next'
+                }) }}
+      </form>
+    </div>
+  </div>
+{% endblock %}

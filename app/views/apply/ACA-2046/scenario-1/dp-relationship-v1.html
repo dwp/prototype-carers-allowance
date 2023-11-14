@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="dp-address1">
+
+           {% set otherHtml %}
+                {{ govukInput({
+            
+                classes: "govuk-!-width-two-thirds",
+                label: {
+                    text: "Relationship"
+                }
+                }) }}
+                {% endset -%}
+
+
+       <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      What is James Smith's relationship to you?
+    </label>
+  </h1>
+  <div id="event-name-hint" class="govuk-hint">
+    For example, father, daughter, neighbour, friend
+
+  </div>
+  <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+</div>
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

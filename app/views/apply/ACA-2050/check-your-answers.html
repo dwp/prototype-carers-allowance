@@ -1,0 +1,370 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Check your answers – Apply for Carer’s Allowance – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ super() }}
+{{ govukBackLink({
+text: 'Back',
+href: 'javascript:history.back()'
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <form action="declaration">
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <h2 class="govuk-heading-m">
+          Eligibility questions
+        </h2>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What benefit does the person you provide care for get?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Adult Disability Payment
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state"
+              href="pay-details?edit&amp;editorigin=/ui-citizen-claim/review#">
+              Change <span class="govuk-visually-hidden">bank or building society details.</span></a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you spend 35 or more hours caring for someone?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state"
+              href="pay-details?edit&amp;editorigin=/ui-citizen-claim/review#">
+              Change <span class="govuk-visually-hidden">bank or building society details.</span></a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            4 4 2009
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state"
+              href="pay-details?edit&amp;editorigin=/ui-citizen-claim/review#">
+              Change <span class="govuk-visually-hidden">bank or building society details.</span></a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What country do you live in?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            England, Scotland or Wales
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state"
+              href="pay-frequency?edit&amp;editorigin=/ui-citizen-claim/review#f-howOftenPaid">
+              Change <span class="govuk-visually-hidden">how often we should pay your Carer's Allowance.</span></a>
+          </dd>
+        </div>
+      </dl>
+
+
+        <!-- <h2 class="govuk-heading-m">
+          Payment details
+        </h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Bank or building society account details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Details provided
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state"
+              href="pay-details?edit&amp;editorigin=/ui-citizen-claim/review#">
+              Change <span class="govuk-visually-hidden">bank or building society details.</span></a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How often should we pay your Carer's Allowance?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Every 4 weeks
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state"
+              href="pay-frequency?edit&amp;editorigin=/ui-citizen-claim/review#f-howOftenPaid">
+              Change <span class="govuk-visually-hidden">how often we should pay your Carer's Allowance.</span></a>
+          </dd>
+        </div>
+      </dl> -->
+
+      <h2 class="govuk-heading-m">
+        Additional information
+      </h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you want to tell us any additional information about your claim?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state"
+              href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-additionalInformation">
+              Change <span class="govuk-visually-hidden">the additional details you have told us about your
+                claim.</span></a>
+          </dd>
+        </div>
+      
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            This application was completed by
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Susan Smith
+          </dd>
+
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state"
+              href="third-party?edit&amp;editorigin=/ui-citizen-claim/review#f-areYouTheCarer">
+              Change <span class="govuk-visually-hidden">who this application was completed by.</span></a>
+          </dd>
+        </div>
+      </dl>
+
+
+        <h2 class="govuk-heading-m">
+          Contact preferences
+        </h2>
+  
+        <!-- <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you want to receive future communications in Welsh?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state"
+              href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-futureCommunicationsInWelsh">
+              Change <span class="govuk-visually-hidden">your answer to the question, 'do you want to receive future
+                communications in Welsh'.</span></a>
+          </dd>
+        </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How would you like to receive the decision about your application?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Email
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link govuk-link--no-visited-state"
+                href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-additionalInformation">
+                Change <span class="govuk-visually-hidden">the additional details you have told us about your
+                  claim.</span></a>
+            </dd>
+          </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Email address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                susan.grainger@gmail.com
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link govuk-link--no-visited-state"
+                  href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-additionalInformation">
+                  Change <span class="govuk-visually-hidden">the additional details you have told us about your
+                    claim.</span></a>
+              </dd>
+            </div>
+            </dl> -->
+
+            <!-- <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  How would you like to receive the decision about your application?
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Letter and email
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link govuk-link--no-visited-state"
+                    href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-additionalInformation">
+                    Change <span class="govuk-visually-hidden">the additional details you have told us about your
+                      claim.</span></a>
+                </dd>
+              </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    susan.grainger@gmail.com
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state"
+                      href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-additionalInformation">
+                      Change <span class="govuk-visually-hidden">the additional details you have told us about your
+                        claim.</span></a>
+                  </dd>
+                </div>
+                </dl> -->
+
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Do you want to receive future communications in Welsh?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link govuk-link--no-visited-state"
+              href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-futureCommunicationsInWelsh">
+              Change <span class="govuk-visually-hidden">your answer to the question, 'do you want to receive future
+                communications in Welsh'.</span></a>
+          </dd>
+        </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      How would you like to receive the decision about your application?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Letter
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link govuk-link--no-visited-state"
+                        href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-additionalInformation">
+                        Change <span class="govuk-visually-hidden">the additional details you have told us about your
+                          claim.</span></a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Do you want an email to confirm we have received your application?
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Yes
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link govuk-link--no-visited-state"
+                        href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-additionalInformation">
+                        Change <span class="govuk-visually-hidden">the additional details you have told us about your
+                          claim.</span></a>
+                    </dd>
+                  </div>
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Email address
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        susan.grainger@gmail.com
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link govuk-link--no-visited-state"
+                          href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-additionalInformation">
+                          Change <span class="govuk-visually-hidden">the additional details you have told us about your
+                            claim.</span></a>
+                      </dd>
+                    </div>
+                    </dl>
+
+
+
+
+
+
+                    <!-- <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Do you want to receive future communications in Welsh?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          No
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link govuk-link--no-visited-state"
+                            href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-futureCommunicationsInWelsh">
+                            Change <span class="govuk-visually-hidden">your answer to the question, 'do you want to receive future
+                              communications in Welsh'.</span></a>
+                        </dd>
+                      </div>
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          How would you like to receive the decision about your application?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          Letter
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link govuk-link--no-visited-state"
+                            href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-additionalInformation">
+                            Change <span class="govuk-visually-hidden">the additional details you have told us about your
+                              claim.</span></a>
+                        </dd>
+                      </div>
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Do you want an email to confirm we have received your application?
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          No
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link govuk-link--no-visited-state"
+                            href="information-additional-information?edit&amp;editorigin=/ui-citizen-claim/review#f-additionalInformation">
+                            Change <span class="govuk-visually-hidden">the additional details you have told us about your
+                              claim.</span></a>
+                        </dd>
+                      </div>
+                        </dl> -->
+
+      {{ govukButton({
+      html: 'Print summary',
+      classes: 'govuk-button--secondary'
+      }) }}
+
+      {{ govukInsetText ({
+      text: 'Printing the summary does not send your application. You must click continue and send it from the next
+      page.'
+      }) }}
+
+      {{ govukButton({
+      html: 'Continue'
+      }) }}
+    </form>
+  </div>
+</div>
+
+{% endblock %}

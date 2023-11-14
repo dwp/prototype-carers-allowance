@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Third party - Apply for Carer’s Allowance
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="rival-ni">
+        {{ govukDateInput ({
+          id: 'rivalDateOfBirth',
+          namePrefix: 'rivalDateOfBirth',
+          fieldset: {
+            legend: {
+              text: 'What is ' + data | getDpName + ' date of birth?',
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--l'
+            }
+          },
+          hint: {
+            text: "If you don't know this you can leave it blank"
+          },
+          items: [
+            {
+              classes: 'govuk-input--width-2',
+              name: 'day',
+              label: 'Day',
+              value: data['rivalDateOfBirth-day']
+            },
+            {
+              classes: 'govuk-input--width-2',
+              name: 'month',
+              label: 'Month',
+              value: data['rivalDateOfBirth-month']
+            },
+            {
+              classes: 'govuk-input--width-4',
+              name: 'year',
+              label: 'Year',
+              value: data['rivalDateOfBirth-year']
+            }
+          ],
+          hint: {
+            text: 'For example, 27 5 1980'
+          }
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Based on your date of birth, you are not eligible for Carer's Allowance - Apply for Carer’s Allowance
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+        <h1 class="govuk-heading-l">
+          You cannot get Carer’s Allowance if you are under 16
+        </h1>
+
+        <p class="govuk-body">
+          You entered your date of birth as <b>{{ data | getCarerDateOfBirth }}</b>. This means you are under 16 and cannot get Carer's Allowance.
+        </p>
+
+        <p class="govuk-body">
+          You can now <a href="#">end your application</a>. Your answers will be deleted.
+        </p>
+
+        <h2 class="govuk-heading-m">
+          If you still want to continue your application
+        </h2>
+
+        <p class="govuk-body">
+          You are still legally allowed to <a href="country">continue applying for Carer's Allowance</a>, even though you are not eligible for it.
+        </p>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

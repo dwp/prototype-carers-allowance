@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  About your nationality and where you live
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="nationality-payments-from-abroad">
+
+                 {{ govukCharacterCount ({
+            name: 'applicant-been-away-details',
+            id: 'applicant-been-away-details',
+            maxlength: '3000',
+            label: {
+              text: "Details of the times you have been away from England, Scotland or Wales for more than 52 weeks since " + data | claimDateMinusThreeYears,
+              classes: "govuk-label--l",
+              isPageHeading: true
+            },
+            hint: {
+              text: 'Include dates you left and returned. We might contact you for further details.'
+            }
+          }) }}
+       
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

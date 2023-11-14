@@ -1,0 +1,105 @@
+{% extends 'layout_email.html' %}
+
+{% block pageTitle %}
+    Email: GB no docs needed – break in care
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            {% set emailContentHTML %}
+
+                <h2 class="govuk-heading-m">Carer’s Allowance – change of details</h2>
+
+                <p>The Department for Work and Pensions (DWP) has received your change.</p>
+
+                <p>If we need more information about this, we will contact you by phone or post.</p>
+
+                <div class="govuk-inset-text">
+                 It could take longer than normal to process this change because of COVID-19 (coronavirus). If this delay means you are paid too much Carer’s Allowance, you will not have to pay it back. 
+                </div>
+
+                <p>Report another change straight away if you:</p>
+
+                <ul class="govuk-body">
+                    <li>start providing care again </li>
+                    <li>permanently stop providing care</li>
+                </ul>
+
+                <h2 class="govuk-heading-m">If you need to report another change </h2>
+
+                <p>You can report a change online at <a href="https://www.gov.uk/carers-allowance-report-change">https://www.gov.uk/carers-allowance-report-change</a>.</p>
+
+                <p>You can also report a change by phone or post:</p>
+
+                <div class="govuk-inset-text">
+
+                <p>Telephone: 0800 731 0297</p>
+
+                <p>Carer’s Allowance Unit<br>
+                    Mail Handling Site A<br>
+                    Wolverhampton<br>
+                    WV98 2AB</p>
+
+                </div>  
+
+                <p>You cannot report a change by email.</p>
+
+                <h2 class="govuk-heading-m">Email contact policy</h2>
+
+                 <p>Do not reply to this email.</p>
+
+                 <p>Emails sent to this mailbox are not monitored and will be automatically deleted.</p>
+
+                 <p>DWP does not ask for personal or confidential information by email.</p>
+
+                 <p>For office use only – appVersion/schemaVersion/transactionId</p>
+
+            {% endset %}
+
+
+            {{ prototypeEmailPreview({
+                headers: [
+                    {
+                        key: {
+                            text: 'From'
+                        },
+                        value: {
+                            text: 'Apply and Maintain Carers Allowance'
+                        }
+                    },
+                    {
+                        key: {
+                            text: 'To'
+                        },
+                        value: {
+                            text: 'test@test.com'
+                        }
+                    },
+                    {
+                        key: {
+                            text: 'Subject'
+                        },
+                        value: {
+                            text: '	Changes to your Carer’s Allowance'
+                        }
+                    }
+                ],
+                content: {
+                    html: emailContentHTML
+
+
+            
+
+                }
+            }) }}
+            
+
+        </div>
+
+</div>
+
+{% endblock %}

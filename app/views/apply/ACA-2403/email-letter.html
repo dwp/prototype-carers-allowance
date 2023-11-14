@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="declaration">
+
+                <h1 class="govuk-heading-l">What is your email address?</h1>
+
+               <p>This is so we can email you to confirm we have received your application.</p> 
+                    
+
+                {{ govukInput ({
+                  id: 'carer-email',
+                  name: 'carer-email',
+                  value: data['carer-email'] if data['carer-email'] else '',
+                  type: 'email',
+                  label: {
+                    text: 'Email address',
+                    classes: 'app-bold-label'
+                  }
+                }) }}
+
+                {{ govukInput ({
+                  id: 'carer-email-confirm',
+                  name: 'carer-email-confirm',
+                  value: data['carer-email-confirm'] if data['carer-email-confirm'] else '',
+                  type: 'email',
+                  label: {
+                    text: 'Confirm email address',
+                    classes: 'app-bold-label'
+                  }
+                }) }}
+
+ 
+             
+
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

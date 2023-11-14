@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  What benefit does the person you provide care for get?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="why-end-claim">
+
+
+{{ govukRadios({
+  name: "where-do-you-live",
+  fieldset: {
+    legend: {
+      text: "What change do you want to report?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "end",
+      text: "I want to end my Carer’s Allowance claim",
+      hint: {
+        text: "For example, you are no longer providing care for 35 hours a week."
+      }
+    },
+    {
+      value: "employment~/changes/ACA-2447-3/break",
+      text: "My employment or self-employment income has changed",
+      hint: {
+        text: "For example, you have started a job or your pay has changed."
+      }
+    },
+    {
+      value: "break~/changes/ACA-2447-3/break",
+      text: "I temporarily stopped providing 35 hours of care a week",
+      hint: {
+        text: "For example, a hospital or care-home stay has meant there has been a break in the care you provide."
+      }
+    },
+    {
+      value: "address~/changes/ACA-2447-3/break",
+      text: "My address has changed"
+    },
+    {
+      value: "bank~/changes/ACA-2447-3/break",
+      text: "I want to change my payment details",
+      hint: {
+        text: "For example, your bank details have changed or you want to change how often you are paid."
+      }
+    },
+    {
+    value: "somethingElse~/changes/ACA-2447-3/break",
+      text: "Something else",
+      hint: {
+        text: "Tell us about anything else you think may affect your claim."
+      }
+    }
+  ]
+}) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}

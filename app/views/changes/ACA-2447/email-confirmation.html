@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+    We need to know about any breaks in care
+{% endblock %}
+{% block beforeContent %} 
+    {{ super() }}
+    {{ govukBackLink ({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form method="post">
+           
+                       
+
+
+                   {{ govukRadios({
+                    name: "confirmation",
+                    fieldset: {
+                      legend: {
+                        text: "Do you want an email to confirm your change has been received?",
+                        isPageHeading: true,
+                        classes: "govuk-fieldset__legend--l"
+                      }
+                    },
+                    items: [
+                      {
+                        value: "yes~/changes/ACA-2447/email",
+                        text: "Yes",
+                        checked: true if data.confirmation == 'yes'
+                      },
+                      {
+                        value: "no~/changes/ACA-2447/declaration",
+                        text: "No",
+                        checked: true if data.confirmation == 'no'
+                      }
+                    ]
+                  }) }}
+
+
+                
+
+                
+                {{ govukButton ({
+                    html: 'Continue',
+                    classes: 'govuk-button'
+                }) }}
+
+            </form>
+        </div>
+</div>
+{% endblock %}

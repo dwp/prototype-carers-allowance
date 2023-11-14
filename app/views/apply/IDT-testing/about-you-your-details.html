@@ -1,0 +1,123 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Your details
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="about-you-marital-status">
+
+        <h1 class="govuk-heading-l">Your name, National Insurance number and date of birth</h1>
+
+        {{ govukInput ({
+          id: 'carerTitle',
+          name: 'carerTitle',
+          value: data.carerTitle,
+          classes: 'govuk-input--width-20',
+          label: {
+            text: 'Title',
+            classes: 'govuk-input--width-20 app-bold-label'
+          }
+        }) }}
+
+        {{ govukInput ({
+          id: 'carerFirstName',
+          name: 'carerFirstName',
+          value: data.carerFirstName,
+          classes: 'govuk-input--width-20',
+          label: {
+            text: 'First name',
+            classes: 'govuk-input--width-20 app-bold-label'
+          }
+        }) }}
+
+        {{ govukInput ({
+          id: 'carerMiddleName',
+          name: 'carerMiddleName',
+          value: data.carerMiddleName,
+          classes: 'govuk-input--width-20',
+          label: {
+            text: 'Middle name(s)',
+            classes: 'govuk-input--width-20 app-bold-label'
+          }
+        }) }}
+
+        {{ govukInput ({
+          id: 'carerLastName',
+          name: 'carerLastName',
+          value: data.carerLastName,
+          classes: 'govuk-input--width-20',
+          label: {
+            text: 'Last name',
+            classes: 'govuk-input--width-20 app-bold-label'
+          }
+        }) }}
+
+        {{ govukInput ({
+          id: 'carerNationalInsuranceNumber',
+          name: 'carerNationalInsuranceNumber',
+          value: data.carerNationalInsuranceNumber,
+          classes: 'govuk-input--width-20',
+          label: {
+            text: 'National Insurance number',
+            classes: 'govuk-input--width-20 app-bold-label'
+          },
+          hint: {
+            text: 'This is on your NI number card, benefit letter, payslip or P60. For example, QQ123456C'
+          }
+        }) }}
+
+        {{ govukDateInput ({
+          id: 'carerDateOfBirth',
+          namePrefix: 'carerDateOfBirth',
+          fieldset: {
+            legend: {
+              text: 'Date of birth',
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--s'
+            }
+          },
+          items: [
+            {
+              classes: 'govuk-input--width-2',
+              name: 'day',
+              label: 'Day',
+              value: data['carerDateOfBirth-day']
+            },
+            {
+              classes: 'govuk-input--width-2',
+              name: 'month',
+              label: 'Month',
+              value: data['carerDateOfBirth-month']
+            },
+            {
+              classes: 'govuk-input--width-4',
+              name: 'year',
+              label: 'Year',
+              value: data['carerDateOfBirth-year']
+            }
+          ],
+          hint: {
+            text: 'For example, 27 5 1980'
+          }
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
