@@ -15,11 +15,11 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="about-you-telephone">
+      <form action="scotland-ineligible">
 
         <h1 class="govuk-heading-l">Select your address</h1>
 
-        <p class="govuk-body">2 addresses found for <b>4</b> and <b>NE1 4GB</b>. <a href="about-you-postcode-lookup">Change</a></p>
+        <p class="govuk-body">2 addresses found for <b>4</b> and <b>ED1 0TD</b>. <a href="about-you-postcode-lookup">Change</a></p>
 
         {{ govukRadios({
           name: "where-do-you-live",
@@ -27,11 +27,11 @@
           items: [
             {
               value: "12345",
-              text: "14 High Road, Newcastle Upon Tyne, NE1 4BG"
+              text: "14 High Road, Edinburgh, ED1 0TD"
             },
             {
               value: "54321",
-              text: "4 High Road, Newcastle Upon Tyne, NE1 4BG"
+              text: "4 High Road, Edinburgh, ED1 0TD"
             }
           ]
         }) }}

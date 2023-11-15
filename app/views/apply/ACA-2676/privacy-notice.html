@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+  Third party - Apply for Carer’s Allowance
+{% endblock %}
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="third-party">
+        <h1 class="govuk-heading-l">
+          How we use your information
+        </h1>
+        <p>We will treat your information carefully. We may use it for any of our purposes.
+          <br>
+            <br>
+              To learn about your information rights and how we use information,
+              <a href="https://www.gov.uk/government/organisations/department-for-work-pensions/about/personal-information-charter">see our personal information charter (opens in new tab)</a>.
+            </p>
+            {{ govukButton({
+          html: 'Continue'
+        }) }}
+          </form>
+        </div>
+      </div>
+    {% endblock %}

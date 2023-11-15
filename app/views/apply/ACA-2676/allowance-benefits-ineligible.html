@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Based on your answers, you are not eligible for Carer's Allowance - Apply for Carer’s Allowance
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+        <h1 class="govuk-heading-l">
+          You cannot get Carer's Allowance if the person you provide care for is not getting a qualifying disability benefit
+        </h1>
+
+        <p class="govuk-body">
+          You can only get Carer's Allowance if the person you provide care for is getting one of the listed disability benefits. If they have applied for one, you must wait until they get a decision before applying for Carer's Allowance.
+        </p>
+
+       <h2 class="govuk-heading-m">
+          Other support available
+        </h2>
+
+        <p class="govuk-body">
+          If you spend at least 20 hours providing care for someone, you may be able to <a href="https://www.gov.uk/carers-credit" class="govuk-link" target="_blank">apply for Carer’s Credit</a> instead.
+        </p>
+        
+          <p class="govuk-body">
+          For help and advice about being a carer, you can visit the <a href="https://www.carersuk.org" class="govuk-link" target="_blank">Carers UK</a> and <a href="https://carers.org/" class="govuk-link" target="_blank">Carers Trust</a> websites. 
+        </p>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

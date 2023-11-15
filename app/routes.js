@@ -15,6 +15,8 @@ const aca2272Routes = require('./routes/aca-2272')
 const aca2047Routes = require('./routes/aca-2047-full-journey')
 const aca2403Routes = require('./routes/aca-2403')
 const aca24473Routes = require('./routes/aca-2447-3')
+const aca2676Routes = require('./routes/aca-2676')
+
 
 //oidv
 
@@ -366,6 +368,7 @@ router.use('/apply/ACA-2403', aca2403Routes)
 
 router.use('/changes/ACA-2447-3', aca24473Routes)
 
+router.use('/apply/ACA-2676', aca2676Routes)
 
 
 router.get('/apply/*', (req, _, next) => {

@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Are you a British national?
+  Where should we send your Carer’s Allowance?
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,14 +15,13 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form method="post">
-
-        {{ govukRadios ({
-          idPrefix: 'britishNational',
-          name: 'britishNational',
+      <form action="idt-filter">
+        {{ govukRadios({
+          idPrefix: 'mobile',
+          name: 'mobile',
           fieldset: {
             legend: {
-              text: 'Are you a British national?',
+              text: "Do you have access to a mobile phone and an email address while making this application?",
               isPageHeading: true,
               classes: 'govuk-fieldset__legend--l'
             }
@@ -30,17 +29,16 @@
           items: [
             {
               text: 'Yes',
-              value: 'British',
-              checked: true if data.britishNational === 'British'
+              value: 'Yes',
+              checked: true if data.mobile == 'Yes'
             },
             {
               text: 'No',
-              value: 'Another nationality',
-              checked: true if data.britishNational === 'Another nationality'
+              value: 'No~end-1',
+              checked: true if data.mobile == 'No'
             }
           ]
         }) }}
-
 
         {{ govukButton({
           html: 'Continue'
@@ -49,4 +47,5 @@
       </form>
     </div>
   </div>
+
 {% endblock %}

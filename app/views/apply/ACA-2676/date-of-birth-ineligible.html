@@ -21,25 +21,26 @@
         </h1>
 
         <p class="govuk-body">
-          You entered your date of birth as <b>9 September 2010</b>, meaning you are under 16.
+          You entered your date of birth as <b>{{ data | getCarerDateOfBirth }}</b>, meaning you are under 16.
         </p>
 
         <p class="govuk-body">
-        You can only apply for Carer's Allowance up to 3 months before you turn 16. Based on the date of birth you entered, this means you can apply again from 9 June 2026.
+        You can only apply for Carer's Allowance up to 3 months before you turn 16. Based on the date of birth you entered, this means you can apply again from {{ data | getEligibleDob }}.
         </p>
 
-        <h2 class="govuk-heading-m">
+         <h2 class="govuk-heading-m">
           Other support available
         </h2>
 
         <p class="govuk-body">
-          The Children’s Society offers <a href="#">advice and support for young carers</a>.
+          The Children’s Society offers <a href="https://www.childrenssociety.org.uk/information/young-people/young-carers" class="govuk-link" target="_blank">advice and support for young carers</a>.
+.
         </p>
 
         
 
           <p class="govuk-body">
-          For help and advice about being a carer, you can also visit the <a href="#">Carers UK</a> and <a href="#">Carers Trust</a> websites. 
+          For help and advice about being a carer, you can also visit the <a href="https://www.carersuk.org" class="govuk-link" target="_blank">Carers UK</a> and <a href="https://carers.org/" class="govuk-link" target="_blank">Carers Trust</a> websites. 
         </p>
 
       </form>
