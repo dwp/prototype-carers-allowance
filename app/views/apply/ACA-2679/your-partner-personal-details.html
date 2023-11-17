@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Have you lived with a partner at any time since your claim date?
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+        {% set hintHTML %}
+         <p>Your claim date is <b>10 October 2023</b></p>
+
+          <p>
+            By partner we mean:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>a person you are married to or live with as if you are married</li>
+            <li>a civil partner or a person you live with as if you are civil partners</li>
+          </ul>
+          </p>
+
+           <p>
+          We look at any money your partner gets from benefits when we work out if you can get Carer’s Allowance.          </p>
+
+        {% endset %}
+
+       
+
+        {{ govukRadios({
+          idPrefix: 'hadPartnerSinceClaimDate',
+          name: 'hadPartnerSinceClaimDate',
+          fieldset: {
+            legend: {
+              text: 'Have you lived with a partner at any time since your claim date?',
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--l'
+            }
+          },
+          hint: {
+            html: hintHTML
+          },
+          items: [
+            {
+              text: 'Yes',
+              value: 'Yes~is-DP-partner',
+              checked: true if data.hadPartnerSinceClaimDate === 'Yes'
+            },
+            {
+              text: 'No',
+              value: 'No',
+              checked: true if data.hadPartnerSinceClaimDate === 'No'
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
