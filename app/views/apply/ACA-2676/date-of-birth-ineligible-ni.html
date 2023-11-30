@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Based on your date of birth, you are not eligible for Carer's Allowance - Apply for Carer’s Allowance
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+        <h1 class="govuk-heading-l">
+          You cannot get Carer's Allowance if you are under 16
+        </h1>
+
+        <p class="govuk-body">
+          You entered your date of birth as <b>{{ data | getCarerDateOfBirth }}</b>, meaning you are under 16.
+        </p>
+
+        <p class="govuk-body">
+        You can only apply for Carer's Allowance up to 3 months before you turn 16. Based on the date of birth you entered, this means you can apply again from {{ data | getEligibleDob }}.
+        </p>
+
+         <h2 class="govuk-heading-m">
+          Other support available
+        </h2>
+
+        <p class="govuk-body">
+          To check if there is anything else you are entitled to, or for advice and support, you can contact the <a href="https://www.nidirect.gov.uk/contacts/make-call-service" class="govuk-link" target="_blank">Make the Call service</a>.
+
+        </p>
+
+        
+
+          <p class="govuk-body">
+          You can also find more help and advice about being a young carer on <a href="https://www.nidirect.gov.uk/articles/young-carers" class="govuk-link" target="_blank">NI Direct</a> and <a href="https://www.carersuk.org/ni/" class="govuk-link" target="_blank">Carers NI</a>. 
+        </p>
+
+
+        
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

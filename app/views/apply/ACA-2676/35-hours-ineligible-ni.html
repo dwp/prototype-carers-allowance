@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Based on your answers, you are not eligible for Carer's Allowance - Apply for Carer’s Allowance
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+        <h1 class="govuk-heading-l">
+          You cannot get Carer’s Allowance if you do not provide care for at least 35 hours a week 
+        </h1>
+
+        <p class="govuk-body">
+          You can only get Carer’s Allowance if you spend at least 35 hours a week providing care for someone.
+
+        <h2 class="govuk-heading-m">
+          Other support available
+        </h2>
+
+        <p class="govuk-body">
+          If you spend at least 20 hours providing care for someone, you may be able to <a href="https://www.nidirect.gov.uk/articles/carers-credit" class="govuk-link" target="_blank">apply for Carer’s Credit</a> instead.
+        </p>
+        
+          <p class="govuk-body">
+          To check if there is anything else you are entitled to, or for advice and support, you can contact the <a href="https://www.nidirect.gov.uk/contacts/make-call-service" class="govuk-link" target="_blank">Make the Call service</a>. 
+        </p>
+
+
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
