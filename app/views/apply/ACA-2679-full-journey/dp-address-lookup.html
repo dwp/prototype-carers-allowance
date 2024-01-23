@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="dp-address-select">
+
+        <h1 class="govuk-heading-l govuk-inp">What is {{ data | getDpName }}'s address?</h1>
+
+        <p>
+          We will use this to let them know about your Carer's Allowance claim.      
+        </p>
+
+      {{ govukInput({
+          id: 'propertyNumberName',
+          name: 'propertyNumberName',
+          value: data.propertyNumberName,
+          classes: 'govuk-input--width-20',
+          label: {
+            text: 'Property number or name',
+            classes: 'govuk-input--width-10 app-bold-label'
+          }
+        }) }}
+
+        {{ govukInput({
+          id: 'postcode',
+          name: 'postcode',
+          value: data.postcode,
+          classes: 'govuk-input--width-10',
+          label: {
+            text: 'UK Postcode',
+            classes: 'app-bold-label'
+          }
+        }) }}
+
+        <p>
+          <a href="about-you-address-manual">Enter address manually</a>
+        </p>
+
+        {{ govukButton({
+          html: 'Find address'
+        }) }}
+
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

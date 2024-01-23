@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  We need to know about any breaks in care
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="allowance-benefits">
+<h1 class="govuk-heading-l"> If you sign out now, any information you have entered will not be saved</h1>
+<p> You have not completed your application for Carer's Allowance. If you sign out, anything you have entered so far will be deleted. </p>
+    <br>
+        {{ govukRadios({
+          name: 'thirtyFiveHoursCaring',
+          fieldset: {
+            legend: {
+              text: "Do you want to sign out?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [{
+            text: "Yes, sign out and delete my information",
+            value: 'Yes',
+            checked: true if data.thirtyFiveHoursCaring === "Yes"
+          }, {
+            text: "No, continue applying for Carer's Allowance",
+            value: 'No~35-hours-ineligible',
+            checked: true if data.thirtyFiveHoursCaring === "No"
+          }]
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

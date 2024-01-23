@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+        <h1 class="govuk-heading-l">
+          You cannot get Carer's Allowance if you are under 16
+        </h1>
+
+        <p class="govuk-body">
+          You entered your date of birth as <b>{{ data | getCarerDateOfBirth }}</b>, meaning you are under 16.
+        </p>
+
+        <p class="govuk-body">
+        You can only apply for Carer's Allowance up to 3 months before you turn 16. Based on the date of birth you entered, this means you can apply again from <br>{{ data | getEligibleDob }}.
+        </p>
+
+        <h2 class="govuk-heading-m">
+          Other support available
+        </h2>
+
+        <p class="govuk-body">
+          The Children’s Society offers <a href="#">advice and support for young carers</a>.
+        </p>
+
+
+        <p class="govuk-body">
+          For help and advice about being a carer, you can also visit the <a href="#">Carers UK</a> and <a href="#">Carers Trust</a> websites.
+        </p>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

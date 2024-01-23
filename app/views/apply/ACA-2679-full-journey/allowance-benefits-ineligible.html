@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form method="post">
+       <h1 class="govuk-heading-l">
+          You cannot get Carer's Allowance if {{ data | getDpName }} is not getting a qualifying benefit
+        </h1>
+
+        <p class="govuk-body">
+          You can only get Carer's Allowance if {{ data | getDpName }} is getting one of the listed qualifying benefits. If they have applied for one, you must wait until they get a decision before applying for Carer's Allowance.
+        </p>
+
+       <h2 class="govuk-heading-m">
+          Other support available
+        </h2>
+
+        <p class="govuk-body">
+          You may be able to <a href="#">apply for Carer’s Credit</a> instead, even if {{ data | getDpName }} does not get one of the listed disability benefits.
+        </p>
+        
+       <p class="govuk-body">
+          For help and advice about being a carer, you can visit the <a href="#">Carers UK</a> and <a href="#">Carers Trust</a> websites. 
+        </p>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

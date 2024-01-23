@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="dp-national-insurance-number">
+        {{ govukDateInput ({
+          id: 'dpDateOfBirth',
+          namePrefix: 'dpDateOfBirth',
+          fieldset: {
+            legend: {
+              text: "What is "+ data | getDpName +"'s date of birth?",
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--l'
+            }
+          },
+          hint: {
+            text: 'For example 27 3 1996'
+          },
+          items: [
+            {
+              classes: 'govuk-input--width-2',
+              name: 'day',
+              label: 'Day',
+              value: data['dpDateOfBirth-day']
+            },
+            {
+              classes: 'govuk-input--width-2',
+              name: 'month',
+              label: 'Month',
+              value: data['dpDateOfBirth-month']
+            },
+            {
+              classes: 'govuk-input--width-4',
+              name: 'year',
+              label: 'Year',
+              value: data['dpDateOfBirth-year']
+            }
+          ],
+          hint: {
+            text: 'For example, 27 5 1980'
+          }
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

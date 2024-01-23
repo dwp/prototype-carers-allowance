@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="35-hours">
+       
+       <div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset" aria-describedby="f-hoursCaring-hint">
+  
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  
+    <h1 class="govuk-fieldset__heading" data-gtm-vis-recent-on-screen-8013095_924="16" data-gtm-vis-first-on-screen-8013095_924="16" data-gtm-vis-total-visible-time-8013095_924="100" data-gtm-vis-has-fired-8013095_924="1">
+      Do you spend 35 hours or more each week providing care for someone?
+    </h1>
+  
+  </legend>
+  
+
+  <div id="f-hoursCaring-hint" class="govuk-hint">
+    <p class="“govuk-body”">This can be any care you provide in person, including helping with things like washing, cooking, household tasks, shopping or travel.</p>
+  </div>
+
+
+  <div class="govuk-radios">
+    
+      
+        
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="f-hoursCaring" name="hoursCaring" type="radio" value="Yes">
+          <label class="govuk-label govuk-radios__label" for="f-hoursCaring">
+        Yes
+      </label>
+          
+        </div>
+        
+        
+      
+    
+      
+        
+        
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="f-hoursCaring-2" name="hoursCaring" type="radio" value="No">
+          <label class="govuk-label govuk-radios__label" for="f-hoursCaring-2">
+        No
+      </label>
+          
+        </div>
+        
+        
+      
+    
+  </div>
+  
+
+</fieldset>
+
+
+</div>
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

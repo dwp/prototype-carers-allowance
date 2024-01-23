@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink ({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="decision-notification">
+       
+
+        {{ govukRadios ({
+          name: 'futureCommunicationsInWelsh',
+          value: data.futureCommunicationsInWelsh,
+          fieldset: {
+            legend: {
+              text: 'Do you want to receive future communications in Welsh?',
+              isPageHeading: false,
+              classes: 'govuk-fieldset__legend--l'
+            }
+          },
+          items: [
+            {
+              text: 'Yes',
+              value: 'Yes',
+              checked: true if data.futureCommunicationsInWelsh == 'Yes'
+            },
+            {
+              text: 'No',
+              value: 'No',
+              checked: true if data.futureCommunicationsInWelsh == 'No'
+            }
+          ]
+        }) }}
+
+        {{ govukButton ({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

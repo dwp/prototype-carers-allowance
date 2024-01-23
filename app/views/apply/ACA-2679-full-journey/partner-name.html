@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="partner-dob">
+
+               <h1 class="govuk-heading-l">What is your partner's name?</h1>
+
+
+                 {{ govukInput({
+                    name: 'partnerTitle',
+                    value: data['partnerTitle'],
+                    label: {
+                        text: "Title"
+                    },
+                    classes: "govuk-!-width-two-thirds",
+                    name: "partnerTitle",
+                    value: data.partnerTitle
+                    }) }}
+
+                     {{ govukInput({
+                    name: 'partnerFirstName',
+                    value: data['partnerFirstName'],
+                    label: {
+                        text: "First name"
+                    },
+                    classes: "govuk-!-width-two-thirds",
+                    name: "partnerFirstName",
+                    value: data.partnerFirstName
+                    }) }}
+
+                      {{ govukInput({
+                    name: 'partnerMiddleName',
+                    value: data['partnerMiddleName'],
+                    label: {
+                        text: "Middle name"
+                    },
+                    classes: "govuk-!-width-two-thirds",
+                    name: "partnerMiddleName",
+                    value: data.partnerMiddleName
+                    }) }}
+
+                     {{ govukInput({
+                    name: 'partnerLastName',
+                    value: data['partnerLastName'],
+                    label: {
+                        text: "Last name"
+                    },
+                    classes: "govuk-!-width-two-thirds",
+                    name: "partnerLastName",
+                    value: data.partnerLastName
+                    }) }}
+                 
+                  {{ govukInput({
+                    name: 'partnerOtherNames',
+                    value: data['partnerOtherNames'],
+                    label: {
+                        text: "Previous last name or maiden name (optional)"
+                    },
+                    classes: "govuk-!-width-two-thirds",
+                    name: "partnerOtherNames",
+                    value: data.partnerOtherNames
+                    }) }}
+
+
+
+
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

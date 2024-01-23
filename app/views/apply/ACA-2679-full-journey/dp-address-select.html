@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="dp-relationship">
+
+        <h1 class="govuk-heading-l">Select the address</h1>
+
+        <p class="govuk-body">3 addresses found for <b>8</b> and <b>NE14 4GD</b>. <a href="about-you-postcode-lookup">Change</a></p>
+
+        {{ govukRadios({
+          name: "where-do-you-live",
+         
+          items: [
+            {
+              value: "12345",
+              text: "118 High Street, Newcastle Upon Tyne, NE14 4GD"
+            },
+            {
+              value: "54321",
+              text: "18 High Street, Newcastle Upon Tyne, NE14 4GD"
+            },
+            {
+            value: "543210",
+              text: "8 High Street, Newcastle Upon Tyne, NE14 4GD"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+        <p>
+          <a href="dp-address-manual">Enter address manually</a>
+        </p>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

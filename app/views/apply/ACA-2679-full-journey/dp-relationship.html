@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="rival-carer">
+
+
+        {{ govukRadios ({
+          idPrefix: 'carerDpRelationship',
+          name: 'carerDpRelationship',
+          fieldset: {
+            legend: {
+              text: "What is "+ data | getDpName +"'s relationship to you?",
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--l'
+            }
+          },
+          items: [
+                        {
+                            text: 'Your partner',
+                            value: 'partner',
+                            checked: true if data.carerDpRelationship == 'partner',
+
+                            hint: {
+                                    text:'A partner is a husband, wife, civil partner or someone that you are in a relationship with.'}
+                        },
+                        {
+                            text: 'Your son or daughter',
+                            value: 'sonOrDaughter',
+                            checked: true if data.carerDpRelationship == 'sonOrDaughter'
+
+                        },
+                        {
+                            text: 'Your parent',
+                            value: 'parent',
+                            checked: true if data.carerDpRelationship == 'parent'
+                        },
+                        {
+                            text: 'Another relative',
+                            value: 'anotherRelative',
+                            checked: true if data.carerDpRelationship == 'anotherRelative',
+                            hint: {
+                                    text:'For example, grandparent, brother, sister, aunt, uncle or cousin.'}
+                        },
+                    
+                        {
+                            text: 'Other',
+                            value: 'otherRelationship',
+                           checked: true if data.carerDpRelationship == 'otherRelationship',
+                            hint: {
+                                text:'For example, a friend or neighbour.'}
+                            
+                        }
+          ]
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

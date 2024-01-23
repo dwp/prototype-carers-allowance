@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+    {{ super() }}
+    {{ govukBackLink({
+        text: 'Back',
+        href: 'javascript:history.back()'
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-two-thirds">
+
+            <form action="rival-carer">
+                <p class="govuk-fieldset__legend--l">
+                    What is {{ data | getDpName }}'s nationality?
+                </p>
+                {{ govukInput ({
+                        id: 'partner-nationality',
+                        name: 'partner-nationality',
+                        classes: 'govuk-!-width-full'
+                        
+                    }) }}
+                {{ govukButton({
+                    html: 'Continue'
+                }) }}
+            </form>
+
+        </div>
+
+</div>
+
+{% endblock %}

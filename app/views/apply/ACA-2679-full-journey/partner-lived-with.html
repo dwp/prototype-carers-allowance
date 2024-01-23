@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="partner-separated">
+
+     
+        {{ govukRadios ({
+          idPrefix: 'PartnerLivedWith',
+          name: 'PartnerLivedWith',
+          fieldset: {
+            legend: {
+              text: 'Have you lived with a partner at any time since '+ data | getClaimStartDate +'? ',
+              isPageHeading: true,
+              classes: 'govuk-fieldset__legend--l'
+            }
+          },
+           hint: {
+            text: 'A partner is a husband, wife, civil partner or someone that you are in a relationship with.'
+          },
+          items: [
+            {
+              text: "Yes",
+              value: 'Yes',
+              checked: true if data.PartnerLivedWith == 'Yes'
+            },
+            {
+              text: "No",
+              value: "No~rival-carer",
+              checked: true if data.PartnerLivedWith == 'No'
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

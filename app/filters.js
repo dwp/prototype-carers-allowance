@@ -359,6 +359,14 @@ filters.getEligibleDob = (data) => {
     return `${data.firstName} ${data.lastName}`
   }
 
+  filters.getPartnerName = (data) => {
+    return `${data.partnerFirstName} ${data.partnerLastName}`
+  }
+
+  filters.getExPartnerName = (data) => {
+    return `${data.exPartnerFirstName} ${data.exPartnerLastName}`
+  }
+
   filters.getQualifyingBenefit = (data) => {
     const benefits = {
       PIP: 'Personal Independence Payment',

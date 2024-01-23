@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Additional information
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink ({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="declaration">
+        {% set additionalDetails %}
+          {{ govukCharacterCount({
+            name: "tellUs",
+            id: "tellUs",
+            value: data.tellUs,
+            maxlength: 3000,
+            label: {
+              text: "Tell us anything else you think we should know about your claim",
+              classes: "govuk-!-font-weight-bold"
+            }
+          }) }}
+        {% endset -%}
+
+
+        {{ govukRadios ({
+          name: 'additionalInformation',
+          value: data.additionalInformation,
+          fieldset: {
+            legend: {
+              text: 'Do you want to tell us any additional information about your claim?',
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "You do not need to include any medical information or details about care"
+          },
+          items: [
+            {
+              text: 'Yes',
+              value: 'Yes',
+              checked: true if data.additionalInformation == 'Yes',
+              conditional: {
+                html: additionalDetails
+              }
+            },
+            {
+              text: 'No',
+              value: 'No',
+              checked: true if data.additionalInformation == 'No'
+            }
+          ]
+        }) }}
+
+       
+
+        {{ govukButton ({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

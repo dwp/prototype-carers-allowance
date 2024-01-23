@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Carer's Allowance prototype
+{% endblock %}
+
+{% block beforeContent %}
+  {{ super() }}
+  {{ govukBackLink({
+    text: 'Back',
+    href: 'javascript:history.back()'
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="pay-details">
+        {{ govukRadios({
+          name: 'rivalCarerBenefits',
+          fieldset: {
+            legend: {
+              text: "Do they receive any benefit payments for caring for " + data | getDpName + "?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+         
+          items: [
+          {
+            text: "Yes",
+            value: 'Yes~rival-carer-details',
+            checked: true if data.rivalCarerBenefits === "Yes"
+          }, 
+          {
+            text: "No",
+            value: 'No',
+            checked: true if data.rivalCarerBenefits === "No"
+          },
+          
+          {
+            text: "Not sure",
+            value: 'Not sure',
+            checked: true if data.rivalCarerBenefits === "Not sure"
+          }]
+        }) }}
+
+        {{ govukButton({
+          html: 'Continue'
+        }) }}
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
